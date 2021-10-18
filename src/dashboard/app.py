@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import os, sys
 import webbrowser
+import streamlit.components.v1 as components
 
 # TESTING: python -m streamlit run C:\Users\leona\Documents\programming\data-science\work\technical_tests\wise_athena_tech_test\src\dashboard\app.py
 path = os.path.dirname(os.path.dirname(__file__))
@@ -26,8 +27,8 @@ stream = StreamlitFunctions(maestro_clientes=maestro_clientes.sample(), maestro_
                             sellin_final=sellin_final.sample(), sellout_final=sellout_final.sample())
 
 menu = st.sidebar.selectbox('Menu:',
-                options=['Welcome', 'Prompt', 'Input Data', 'Data Analysis', 'Final Output',
-                'Conclusion', 'About the company', 'Github Repository'])
+                options=['Welcome', 'Prompt', 'Input Data', 'Data Analysis', 'Data Visualization', 'Final Output',
+                'Conclusion', 'About the company', 'Github Repository', 'End'])
 
 if menu == 'Welcome':
     stream.welcome()
@@ -41,6 +42,9 @@ if menu == 'Input Data':
 if menu == 'Data Analysis':
     stream.analysis()
 
+if menu == 'Data Visualization':
+    stream.data_viz()
+
 if menu == 'Final Output':
     stream.final_output()
 
@@ -52,3 +56,6 @@ if menu == 'About the company':
 
 if menu == 'Github Repository':
     stream.github_repo()
+
+if menu == 'End':
+    stream.end()

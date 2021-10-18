@@ -1,10 +1,12 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 from PIL import Image
 import os, sys
 import requests
 
-sys.path.append(os.path.dirname(__file__))
+path = os.path.dirname(os.path.dirname(__file__))
+sys.path.append(path)
 
 class StreamlitFunctions:
     """
@@ -36,7 +38,7 @@ class StreamlitFunctions:
         st.subheader("If you need to contact me, don't be afraid: \
         * Email: **leonardo.sanchezsoler@gmail.com** \
         * Linkedin: **https://www.linkedin.com/in/leonardosanchezsoler/**")
-        st.subheader("Check my repo in Github: **https://github.com/leosanchezsoler/wise_athena_tech_test/**")
+        st.subheader("Check my repo in Github: **https://github.com/leosanchezsoler/wise-athena-technical-test/**")
 
     
     def prompt(self):
@@ -255,15 +257,62 @@ _PS: Before merging data, our data analyst spent some hours trying to get valuab
         '''
         This method returns a page with all data visualizations
         '''
-        st.write("## SELL-IN DATA")
-        st.write("### HTML charts")
+        droplist = st.sidebar.selectbox('Choose Dataset',
+                        options=['Sell-in Data', 'Sell-out Data'])
         
-        st.write("### Static charts")
+        if droplist == 'Sell-in Data':
+            st.title('SELL-IN DATA')
+            st.write("### HTML charts")
+            sellin_tot_margin_revenue_per_NA = open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'html' + os.sep + 'sellin_tot_margin_revenue_per_NA.html', 'r', encoding='utf-8')
+            source_code = sellin_tot_margin_revenue_per_NA.read() 
+            components.html(source_code, height=500, width=1500)
 
-        st.write("## SELL-OUT DATA")
-        st.write("### HTML charts")
+            tot_sellin_units_per_cat = open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'html' + os.sep + 'tot_sellin_units_per_cat.html', 'r', encoding='utf-8')
+            source_code1 = tot_sellin_units_per_cat.read() 
+            components.html(source_code1, height=500, width=1500)
 
-        st.write("### Static charts")
+            tot_sellin_units_per_nielsen_area = open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'html' + os.sep + 'tot_sellin_units_per_nielsen_area.html', 'r', encoding='utf-8')
+            source_code2 = tot_sellin_units_per_nielsen_area.read() 
+            components.html(source_code2, height=500, width=1500)
+            
+            tot_sellin_margin_per_NA = open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'html' + os.sep + 'tot_sellin_units_sold_to_suppliers.html', 'r', encoding='utf-8')
+            source_code3 = tot_sellin_margin_per_NA.read() 
+            components.html(source_code3, height=500, width=1500)
+
+            total_sellin_revenue_per_state = open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'html' + os.sep + 'total_sellin_revenue_per_state.html', 'r', encoding='utf-8')
+            source_code4 = total_sellin_revenue_per_state.read() 
+            components.html(source_code4, height=500, width=1500)
+            st.write("### Static charts")
+            sellin_heatmap = Image.open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'static' + os.sep + 'sellin_heatmap.png')
+            sellin_price_distribution = Image.open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'static' + os.sep + 'sellin_price_distribution.png')
+
+            st.image(sellin_heatmap, use_column_width='auto')
+            st.image(sellin_price_distribution, use_column_width='auto')
+        
+        if droplist == 'Sell-out Data':
+
+            st.title("SELL-OUT DATA")
+            st.write("### HTML charts")
+            tot_sellout_units_per_cat = open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'html' + os.sep + 'tot_sellout_units_per_cat.html', 'r', encoding='utf-8')
+            source_code5 = tot_sellout_units_per_cat.read() 
+            components.html(source_code5, height=500, width=1500)
+            tot_sellout_units_per_nielsen_area = open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'html' + os.sep + 'tot_sellout_units_per_nielsen_area.html', 'r', encoding='utf-8')
+            source_code6 = tot_sellout_units_per_nielsen_area.read() 
+            components.html(source_code6, height=500, width=1500)
+            tot_sellout_units_sold_to_suppliers = open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'html' + os.sep + 'tot_sellout_units_sold_to_suppliers.html', 'r', encoding='utf-8')
+            source_code7 = tot_sellout_units_per_nielsen_area.read() 
+            components.html(source_code7, height=500, width=1500)            
+            total_sellout_revenue_per_state = open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'html' + os.sep + 'total_sellout_revenue_per_state.html', 'r', encoding='utf-8')
+            source_code8 = total_sellout_revenue_per_state.read() 
+            components.html(source_code8, height=500, width=1500)  
+            st.write("### Static charts")
+
+            sellout_heatmap = Image.open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'static' + os.sep + 'sellout_heatmap.png')
+            sellout_price_distribution = Image.open(os.path.dirname(path) + os.sep + 'reports' + os.sep + 'static' + os.sep +'sellout_price_distribution.png')
+
+            st.image(sellout_heatmap, use_column_width='auto')
+            st.image(sellout_price_distribution, use_column_width='auto')
+
 
     def final_output(self):
         '''
@@ -338,3 +387,10 @@ _PS: Before merging data, our data analyst spent some hours trying to get valuab
         st.write("## Check out the full project in my github Repo")
         url = "https://github.com/leosanchezsoler/wise_athena_tech_test"
         st.write("Check out this [link](%s)" % url)
+
+    def end(self):
+        '''
+        This function shows the end of the streamlit page
+        '''
+        st.title("That's all, folks!")
+        st.video("https://www.youtube.com/watch?v=b9434BoGkNQ")
