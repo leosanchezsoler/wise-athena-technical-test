@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>46141</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section id="wise-athena-technical-test" class="cell markdown">
+<h1><a id='0'>Wise Athena Technical Test</h1></h1>
+<p><img src="https://www.wiseathena.com/wp-content/uploads/2020/10/Wise-Athena-Logo-with-Text.png" alt="wise-athena-logo" /></p>
+</section>
+<div class="cell markdown">
+<ul>
+<li><h2 id="1-introduction"><a href='#1'>1. Introduction</a></h2></li>
+</ul>
+<p><b></b></p>
+<ul>
+<li><h2 id="2-exploratory-data-analysis-eda"><a href='#2'>2. Exploratory Data Analysis (EDA)</a></h2>
+<ul>
+<li><h3 id="21-data-cleaning"><a href='#2.1.'>2.1. Data Cleaning</a></h3></li>
+<li><h3 id="22-data-merging"><a href ='#2.2.'>2.2. Data Merging</a></h3>
+<ul>
+<li><h3 id="221-sellout-data"><a href ='#2.2.1.'>2.2.1. Sellout Data</a></h3></li>
+<li><h3 id="222-sellin-data"><a href ='#2.2.2.'>2.2.2. Sellin Data</a></h3></li>
+</ul></li>
+<li><h3 id="23-data-analysis"><a href='#2.3.'>2.3. Data Analysis</a></h3>
+<ul>
+<li><h3 id="231-checking-outliers"><a href ='#2.3.1.'>2.3.1. Checking outliers</a></h3></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><b></b></p>
+<ul>
+<li><h2 id="3-data-visualization"><a href='#3'>3. Data Visualization</a></h2>
+<ul>
+<li><h3 id="31-profile-report"><a href='#3.1.'>3.1. Profile Report</a></h3></li>
+<li><h3 id="32-sellin-visualizations"><a href='#3.2.'>3.2. Sellin Visualizations</a></h3></li>
+<li><h3 id="33-sellout-visualizations"><a href='#3.3.'>3.3. Sellout Visualizations</a></h3></li>
+</ul></li>
+</ul>
+<p><b></b></p>
+<ul>
+<li><h2 id="4-final-query"><a href='#4'>4. Final query</a></h2>
+<ul>
+<li><h3 id="41-data-science-team-prompt"><a href='#4.1.'>4.1. Data Science Team prompt</a></h3></li>
+<li><h3 id="42-sample-query"><a href='#4.2.'>4.2. Sample query</a></h3></li>
+</ul></li>
+<li><h2 id="5-conclusion"><a href='#5'>5. Conclusion</a></h2>
+<ul>
+<li><h3 id="51-about-the-data"><a href='#5.1.'>5.1. About the Data</a></h3></li>
+<li><h3 id="52-further-steps"><a href='#5.2.'>5.2. Further steps</a></h3></li>
+</ul></li>
+</ul>
+</div>
+<section id="1-introduction" class="cell markdown">
+<h1><a id='1'>1. Introduction</a></h1>
+<h4 id="the-following-is-a-research-on-various-datasets-coming-from-a-wise-athena-cpg-consumer-packaged-goods-client">The following is a research on various datasets coming from a Wise Athena CPG (Consumer Packaged Goods) client.</h4>
+<p>This test consists on analyzing the data and extracting valuable insights from it.</p>
+<p>The goal is to apply some data cleaning techniques in order to create a data structure accessible for the Data Science team, so they can apply their models to it. To achieve it, data needs to be not only clean, but tidy and coherent.</p>
+<h4 id="the-deadline-date-is-october-20th">The deadline date is <em>October 20th</em></h4>
+<h3 id="if-you-need-to-contact-me-dont-be-afraid">If you need to contact me, don't be afraid:</h3>
+<ul>
+<li>Email: <strong><a href="mailto:leonardo.sanchezsoler@gmail.com" class="email">leonardo.sanchezsoler@gmail.com</a></strong></li>
+<li>Linkedin: <strong><a href="https://www.linkedin.com/in/leonardosanchezsoler/" class="uri">https://www.linkedin.com/in/leonardosanchezsoler/</a></strong></li>
+</ul>
+<h3 id="check-my-repo-in-github-httpsgithubcomleosanchezsolerwise-athena-technical-test">Check my repo in Github: <strong><a href="https://github.com/leosanchezsoler/wise-athena-technical-test/" class="uri">https://github.com/leosanchezsoler/wise-athena-technical-test/</a></strong></h3>
+</section>
+<section id="2-exploratory-data-analysis-eda" class="cell markdown">
+<h1><a id='2'>2. Exploratory Data Analysis (EDA)</a></h1>
+</section>
+<section id="overview" class="cell markdown">
+<h3>Overview</h3>
+<p>Our data consists on:</p>
+<ul>
+<li>A master or product catalogue (<code>maestro_productos.csv</code>)
+<ul>
+<li>Contains all available info about the products sold by the client and its competitors.</li>
+</ul></li>
+<li>A master or clients catalogue (<code>maestro_clientes.xlsx</code>)
+<ul>
+<li>Contains all available info about stores and distributors that sell their products.</li>
+</ul></li>
+<li>Sellout files for 2 different suppliers (<code>sellout-proveedor1.csv</code> &amp; <code>sellout-proveedor2.csv</code>)
+<ul>
+<li>Contains sales and sellout price for each product and store</li>
+</ul></li>
+<li>Sellin file (<code>sellin.csv</code>)
+<ul>
+<li>Contains sales and sellin price (from fabricant to retailer) for each product and store.</li>
+</ul></li>
+</ul>
+</section>
+<div class="cell code" data-execution_count="1">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Import the necessary libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co">######## CREATED MODULES ########</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">from</span> utils <span class="im">import</span> config <span class="co"># Config parameters</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">from</span> utils.folders <span class="im">import</span> Folders, Saver <span class="co"># Module for working with folders and saving files</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">from</span> utils.data_mining <span class="im">import</span> DataAnalyzer <span class="co"># Module for Data Analysis</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="im">from</span> utils.visualization <span class="im">import</span> Viz</span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">######## PYTHON MODULES ########</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># For data analysis</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="im">from</span> pandas_profiling <span class="im">import</span> ProfileReport</span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co"># For avoiding warnings</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="im">import</span> warnings</span>
+<span id="cb1-15"><a href="#cb1-15"></a>warnings.filterwarnings(<span class="st">&quot;ignore&quot;</span>)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>First, we access the root directory in order to import the modules properly and deal with our folder structure</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>Folders.append_path(jupyter<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Then, we read the data from our directory With the <code>read_directory_data()</code> method, we store all the data in dictionary keys, and we can access them easily with only 1 line of code</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>data <span class="op">=</span> Folders.read_directory_data(path<span class="op">=</span>config.DATA_PATH)</span></code></pre></div>
+</div>
+<section id="21-data-cleaning" class="cell markdown">
+<h2><a id='2.1.'>2.1. Data Cleaning</a></h2>
+<p>Before extracting insights from the data, it is mandatory to take a look at it's structure and check if there are some rare values, as well as missing values or wrong data types assigned to a specific column.</p>
+<p>In this stage, every single dataset will be analyzed in order to fix them. The process will be very similar for each of them.</p>
+</section>
+<section id="lets-start-with-maestro_clientes" class="cell markdown">
+<h4>Let's start with <code>maestro_clientes</code></h4>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>maestro_clientes <span class="op">=</span> data[<span class="st">&#39;maestro_clientes&#39;</span>]</span>
+<span id="cb4-2"><a href="#cb4-2"></a>display(maestro_clientes.head())</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a>DataAnalyzer.df_info(maestro_clientes)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>In this case it seems that the data is properly formatted, but column names will be converted to lowercase to make them more accessible</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>maestro_clientes <span class="op">=</span> DataAnalyzer.cols_to_lowercase(df<span class="op">=</span>maestro_clientes)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Now, everything seems okey</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>maestro_clientes.head()</span></code></pre></div>
+</div>
+<section id="now-we-will-do-the-same-process-with-maestro_productos" class="cell markdown">
+<h4>Now, we will do the same process with <code>maestro_productos</code></h4>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>maestro_productos <span class="op">=</span> data[<span class="st">&#39;maestro_productos&#39;</span>]</span>
+<span id="cb7-2"><a href="#cb7-2"></a>display(maestro_productos.head())</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a>DataAnalyzer.df_info(maestro_productos)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>For this dataset, it is only necessary to pass column names to lowercase</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>maestro_productos <span class="op">=</span> DataAnalyzer.cols_to_lowercase(df<span class="op">=</span>maestro_productos)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>maestro_productos.head()</span></code></pre></div>
+</div>
+<section id="continue-with-sellin_total" class="cell markdown">
+<h4>Continue with <code>sellin_total</code></h4>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>sellin_total <span class="op">=</span> data[<span class="st">&#39;sellin-total&#39;</span>]</span>
+<span id="cb9-2"><a href="#cb9-2"></a>display(sellin_total.head())</span>
+<span id="cb9-3"><a href="#cb9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4"></a>DataAnalyzer.df_info(sellin_total)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Here we see that there are 18 duplicated values. Let's inspect them to see what happens. And once again, we pass column names to lowercase.</p>
+<p>It is also worth mentioning that the <code>Date</code> column is not a datetime object. It is advisable to change the datatypes in order to manipulate our data based on specific dates range.</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>sellin_total <span class="op">=</span> DataAnalyzer.cols_to_lowercase(df<span class="op">=</span>sellin_total)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="co"># Now date column is a datetype object</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>sellin_total[<span class="st">&#39;date&#39;</span>] <span class="op">=</span> pd.to_datetime(sellin_total[<span class="st">&#39;date&#39;</span>])</span>
+<span id="cb10-4"><a href="#cb10-4"></a>sellin_total.info()</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Inspect duplicate values</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>sellin_total[sellin_total.duplicated(keep<span class="op">=</span><span class="va">False</span>)] <span class="co">#used keep=False to display all rows, not only the duplicated ones</span></span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>By slicing the dataframe, we can see that some rows are completely duplicated, so we will need to remove them</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>sellin_total.drop_duplicates(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="bu">print</span>(<span class="ss">f&quot;Total duplicated values after applying drop_duplicates:</span><span class="ch">\n</span><span class="sc">{</span>sellin_total<span class="sc">.</span>duplicated()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Here is the final structure for <code>sellin_total</code></p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>sellin_total.head()</span></code></pre></div>
+</div>
+<section id="finally-lets-check-sellout-proveedor1--sellout-proveedor2" class="cell markdown">
+<h4>Finally, let's check <code>sellout-proveedor1</code> &amp; <code>sellout-proveedor2</code></h4>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>sellout_prov1 <span class="op">=</span> data[<span class="st">&quot;sellout-proveedor1&quot;</span>]</span>
+<span id="cb14-2"><a href="#cb14-2"></a>display(sellout_prov1.head())</span>
+<span id="cb14-3"><a href="#cb14-3"></a></span>
+<span id="cb14-4"><a href="#cb14-4"></a>DataAnalyzer.df_info(sellout_prov1)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p><code>sellout_prov1</code> has an unnecessary "SO Diaria Piezas" within the date column. In order to remove it we will use the <code>string.split()</code> method</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>sellout_prov1 <span class="op">=</span> DataAnalyzer.cols_to_lowercase(df<span class="op">=</span>sellout_prov1)</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="co"># Use split_df_column() method to remove the unwanted string</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>DataAnalyzer.split_df_column(df<span class="op">=</span>sellout_prov1, cols<span class="op">=</span><span class="st">&quot;date&quot;</span>)</span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="co"># Now date column is a datetype object</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a>sellout_prov1[<span class="st">&quot;date&quot;</span>] <span class="op">=</span> pd.to_datetime(sellout_prov1[<span class="st">&quot;date&quot;</span>])</span>
+<span id="cb15-6"><a href="#cb15-6"></a>sellout_prov1.info()</span></code></pre></div>
+</div>
+<section id="sellout-proveedor2" class="cell markdown">
+<h4><code>sellout-proveedor2</code></h4>
+<p>Notice that the <code>price</code> column is dollar-based. On the next stage, a new column will be added with it's price in euros</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>sellout_prov2 <span class="op">=</span> data[<span class="st">&quot;sellout-proveedor2&quot;</span>]</span>
+<span id="cb16-2"><a href="#cb16-2"></a>display(sellout_prov2.head())</span>
+<span id="cb16-3"><a href="#cb16-3"></a></span>
+<span id="cb16-4"><a href="#cb16-4"></a>DataAnalyzer.df_info(sellout_prov2)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p><code>sellout_prov2</code> needs 4 things to be fixed:</p>
+<ul>
+<li>pass columns to lowercase</li>
+<li>pass date column to datetime</li>
+<li>strip dollar sign from price and pass it to float</li>
+<li>check duplicated values</li>
+</ul>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>sellout_prov2 <span class="op">=</span> DataAnalyzer.cols_to_lowercase(df<span class="op">=</span>sellout_prov2)</span>
+<span id="cb17-2"><a href="#cb17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="co"># Now date column is a datetype object</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>sellout_prov2[<span class="st">&quot;date&quot;</span>] <span class="op">=</span> pd.to_datetime(sellout_prov2[<span class="st">&quot;date&quot;</span>])</span>
+<span id="cb17-5"><a href="#cb17-5"></a></span>
+<span id="cb17-6"><a href="#cb17-6"></a><span class="co"># strip dollar sign and &#39;-&#39; convert price column into datetime</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a>DataAnalyzer.strip_df_column(df<span class="op">=</span>sellout_prov2, cols<span class="op">=</span><span class="st">&quot;price&quot;</span>, strip<span class="op">=</span><span class="st">&quot;-$&quot;</span>, to_float<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb17-8"><a href="#cb17-8"></a>sellout_prov2.info()</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>display(sellout_prov2[sellout_prov2.duplicated(keep<span class="op">=</span><span class="va">False</span>)]) <span class="co">#used keep=False to display all rows, not only the duplicated ones</span></span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>We need to repeat the same process that we did with <code>sellin_total</code></p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>sellout_prov2.drop_duplicates(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="bu">print</span>(<span class="ss">f&quot;Total duplicated values after applying drop_duplicates:</span><span class="ch">\n</span><span class="sc">{</span>sellout_prov2<span class="sc">.</span>duplicated()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Here is the final structure for both <code>sellout_prov1</code> &amp; <code>sellout_prov2</code></p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>display(sellout_prov1.head(), sellout_prov2.head())</span></code></pre></div>
+</div>
+<section id="22-data-merging" class="cell markdown">
+<h2><a id='2.2.'>2.2. Data Merging</a></h2>
+<h4 id="after-cleaning-the-data-we-now-have-an-overview-of-what-it-looks-like-and-have-a-glimpse-of-the-relations-that-can-be-established-between-the-datasets">After cleaning the data, we now have an overview of what it looks like and have a glimpse of the relations that can be established between the datasets.</h4>
+<ul>
+<li>Some columns seem to be suitable for merging and joining our data:
+<ul>
+<li><code>Dates</code></li>
+<li><code>skus</code></li>
+<li><code>proveedores</code></li>
+</ul></li>
+<li>It is also interesting to create new columns based on numeric data:
+<ul>
+<li><code>prices</code></li>
+<li><code>pieces</code></li>
+</ul></li>
+</ul>
+<h4 id="lets-find-a-way-in-which-data-can-be-combined-by-doing-this-we-would-be-able-to-have-a-wider-scope-when-looking-for-worthy-insights">Let's find a way in which data can be combined. By doing this, we would be able to have a wider scope when looking for worthy insights</h4>
+<p><em>PS: Before merging data, our data analyst spent some hours trying to get valuable info from each dataset separately. It was after realising that the conclusions were not satisfactory enough, that he changed his mind.</em></p>
+</section>
+<section id="221-sellout-data" class="cell markdown">
+<h3><a id ='2.2.1.'>2.2.1. Sellout Data</a></h3>
+</section>
+<section id="lets-begin-again-with-maestro_clientes" class="cell markdown">
+<h3>Let's begin again with <code>maestro_clientes</code></h3>
+<p>Let's see how frequent our values are</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>DataAnalyzer.get_df_value_counts(df<span class="op">=</span>maestro_clientes)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>It is surprising that all the data related to the stores that sell our products is divided in only 2 suppliers(<code>cadena</code> column):</p>
+<ul>
+<li><code>proveedor_1</code></li>
+<li><code>proveedor_2</code></li>
+</ul>
+<p>So it is appropiate to merge it with our sellout data, which is also divided in 2 suppliers:</p>
+<ul>
+<li><code>sellout_prov1</code></li>
+<li><code>sellout_prov2</code></li>
+</ul>
+<p>This will link the historic sales registry with further description of our clients. By doing these, we will be able to see which stores ordered more units in the last few years.</p>
+<h4 id="to-achieve-this-we-will-take-the-following-steps">To achieve this, we will take the following steps:</h4>
+<ul>
+<li>divide <code>maestro_client</code> in two datasets filtered by each supplier</li>
+<li>rename the necessary columns to merge datasets</li>
+<li>merge each resulting dataset with their sellout dataset
+<ul>
+<li>we could merge them by store_id</li>
+</ul></li>
+<li>subtract each dataset length to know how many observations didn't match properly</li>
+<li>check for duplicates or strange values (mispelling, wrong registries...)</li>
+<li>report any relevant issue in order to ask the client for more information</li>
+</ul>
+</div>
+<div class="cell markdown">
+<ol>
+<li>Rename the necessary columns 
+<code>sellout_prov1</code>and <code>sellout_prov2</code> have the same info but some columns don't have the same name. For example:</li>
+</ol>
+<ul>
+<li>units &amp; pieces</li>
+<li>sku &amp; #sku</li>
+</ul>
+<p><code>maestro_clientes</code> has different name for store_id:</p>
+<ul>
+<li>num tda</li>
+</ul>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="co"># Now both datasets have the same structure</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a>sellout_prov2.rename(columns<span class="op">=</span>{<span class="st">&#39;# sku&#39;</span>: <span class="st">&#39;sku&#39;</span>, <span class="st">&#39;pieces&#39;</span>: <span class="st">&#39;units&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb22-3"><a href="#cb22-3"></a>maestro_clientes.rename(columns<span class="op">=</span>{<span class="st">&#39;num tda&#39;</span>: <span class="st">&#39;store_id&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb22-4"><a href="#cb22-4"></a>display(sellout_prov2.head(), maestro_clientes.head())</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<ol>
+<li>Divide <code>maestro cliente</code></li>
+</ol>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Divide maestro cliente</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>client_prov1 <span class="op">=</span> maestro_clientes[maestro_clientes[<span class="st">&#39;cadena&#39;</span>] <span class="op">==</span> <span class="st">&#39;proveedor_1&#39;</span>]</span>
+<span id="cb23-3"><a href="#cb23-3"></a>client_prov2 <span class="op">=</span> maestro_clientes[maestro_clientes[<span class="st">&#39;cadena&#39;</span>] <span class="op">==</span> <span class="st">&#39;proveedor_2&#39;</span>]</span>
+<span id="cb23-4"><a href="#cb23-4"></a>display(client_prov1.head(), client_prov2.head())</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<ol>
+<li>Merge each resulting dataset with their sellout dataset</li>
+</ol>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># now our datasets are merged</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a>merge_prov1 <span class="op">=</span> client_prov1.merge(sellout_prov1, on<span class="op">=</span><span class="st">&#39;store_id&#39;</span>)</span>
+<span id="cb24-3"><a href="#cb24-3"></a>merge_prov2 <span class="op">=</span> client_prov2.merge(sellout_prov2, on<span class="op">=</span><span class="st">&#39;store_id&#39;</span>)</span>
+<span id="cb24-4"><a href="#cb24-4"></a></span>
+<span id="cb24-5"><a href="#cb24-5"></a>display(merge_prov1.head(), merge_prov2.head())</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Just by merging them, we've identified that there are different operations for the same <code>store_id</code> 
+ let's see if <code>sellout_prov1</code> has repeated store ids</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a>sellout_prov1[sellout_prov1[<span class="st">&#39;store_id&#39;</span>] <span class="op">==</span> <span class="dv">2</span>]</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>As we can see above, there are different registries for each store</p>
+<p>To encapsulate better our registries, it is advisable to create a <code>id</code> column to work with each particular row</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="co"># But first, let&#39;s check for duplicates</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a>display(merge_prov1[merge_prov1.duplicated()].head(), merge_prov2[merge_prov2.duplicated()].head())</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a>merge_prov1[<span class="st">&#39;id&#39;</span>] <span class="op">=</span> merge_prov1.index</span>
+<span id="cb27-2"><a href="#cb27-2"></a>merge_prov2[<span class="st">&#39;id&#39;</span>] <span class="op">=</span> merge_prov2.index</span>
+<span id="cb27-3"><a href="#cb27-3"></a></span>
+<span id="cb27-4"><a href="#cb27-4"></a><span class="co"># use id column as index</span></span>
+<span id="cb27-5"><a href="#cb27-5"></a>merge_prov1.set_index(<span class="st">&#39;id&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb27-6"><a href="#cb27-6"></a>merge_prov2.set_index(<span class="st">&#39;id&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb27-7"><a href="#cb27-7"></a><span class="co"># check if it worked</span></span>
+<span id="cb27-8"><a href="#cb27-8"></a>display(merge_prov1.head(), merge_prov2.head())</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<ol>
+<li>Subtract each dataset length to know how many observations didn't match properly</li>
+</ol>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a>subtract_prov1 <span class="op">=</span> merge_prov1.shape[<span class="dv">0</span>] <span class="op">-</span> sellout_prov1.shape[<span class="dv">0</span>]</span>
+<span id="cb28-2"><a href="#cb28-2"></a>subtract_prov2 <span class="op">=</span> merge_prov2.shape[<span class="dv">0</span>] <span class="op">-</span> sellout_prov2.shape[<span class="dv">0</span>]</span>
+<span id="cb28-3"><a href="#cb28-3"></a></span>
+<span id="cb28-4"><a href="#cb28-4"></a><span class="bu">print</span>(<span class="ss">f&quot;prov_1 difference: </span><span class="sc">{</span>subtract_prov1<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb28-5"><a href="#cb28-5"></a><span class="bu">print</span>(<span class="ss">f&quot;prov_2 difference: </span><span class="sc">{</span>subtract_prov2<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<ol>
+<li>Check for duplicates or strange values (mispelling, wrong registries...)</li>
+</ol>
+<ul>
+<li>check registries with no units</li>
+</ul>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a>no_units_st, less_zero_st <span class="op">=</span> DataAnalyzer.less_zero_units(df<span class="op">=</span>sellin_total, col<span class="op">=</span><span class="st">&#39;pieces&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a>no_units_m1, less_zero_m1 <span class="op">=</span> DataAnalyzer.less_zero_units(df<span class="op">=</span>merge_prov1, col<span class="op">=</span><span class="st">&#39;units&#39;</span>)</span>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="bu">print</span>()</span>
+<span id="cb30-3"><a href="#cb30-3"></a>no_units_m2, less_zero_m2 <span class="op">=</span> DataAnalyzer.less_zero_units(df<span class="op">=</span>merge_prov2, col<span class="op">=</span><span class="st">&#39;units&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>We're on a hurry, so we have to make choices. To see what to do with this data, le'ts its proportion inside the total dataset</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a><span class="bu">print</span>(<span class="st">&quot;###### merge_prov1 ######&quot;</span>)</span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="bu">print</span>(<span class="st">&#39;Less than 0:&#39;</span>)</span>
+<span id="cb31-3"><a href="#cb31-3"></a>DataAnalyzer.check_data_percentage(df<span class="op">=</span>merge_prov1, subset<span class="op">=</span>less_zero_m1)</span>
+<span id="cb31-4"><a href="#cb31-4"></a><span class="bu">print</span>(<span class="st">&#39;Equal to 0:&#39;</span>)</span>
+<span id="cb31-5"><a href="#cb31-5"></a>DataAnalyzer.check_data_percentage(df<span class="op">=</span>merge_prov1, subset<span class="op">=</span>no_units_m2)</span>
+<span id="cb31-6"><a href="#cb31-6"></a></span>
+<span id="cb31-7"><a href="#cb31-7"></a><span class="bu">print</span>()</span>
+<span id="cb31-8"><a href="#cb31-8"></a><span class="bu">print</span>(<span class="st">&#39;**************************************&#39;</span>)</span>
+<span id="cb31-9"><a href="#cb31-9"></a><span class="bu">print</span>()</span>
+<span id="cb31-10"><a href="#cb31-10"></a><span class="bu">print</span>(<span class="st">&quot;###### merge_prov2 ######&quot;</span>)</span>
+<span id="cb31-11"><a href="#cb31-11"></a><span class="bu">print</span>(<span class="st">&#39;Less than 0:&#39;</span>)</span>
+<span id="cb31-12"><a href="#cb31-12"></a>DataAnalyzer.check_data_percentage(df<span class="op">=</span>merge_prov2, subset<span class="op">=</span>less_zero_m1)</span>
+<span id="cb31-13"><a href="#cb31-13"></a><span class="bu">print</span>(<span class="st">&#39;Equal to 0:&#39;</span>)</span>
+<span id="cb31-14"><a href="#cb31-14"></a>DataAnalyzer.check_data_percentage(df<span class="op">=</span>merge_prov2, subset<span class="op">=</span>no_units_m2)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>The percentage of missing and less than zero data is practically irrelevant.</p>
+<p>In this particular case, the choice will be to erase them. But thanks to assigning a <code>id</code>, we can ask our client about those particular observations</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a>merge_prov1 <span class="op">=</span> merge_prov1[merge_prov1.units <span class="op">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb32-2"><a href="#cb32-2"></a>merge_prov2 <span class="op">=</span> merge_prov2[merge_prov2.units <span class="op">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb32-3"><a href="#cb32-3"></a></span>
+<span id="cb32-4"><a href="#cb32-4"></a><span class="co"># Now we don&#39;t have duplicated values</span></span>
+<span id="cb32-5"><a href="#cb32-5"></a>display(merge_prov1[merge_prov1.units <span class="op">&lt;=</span> <span class="dv">0</span>], merge_prov2[merge_prov2.units <span class="op">&lt;=</span> <span class="dv">0</span>])</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Now, <code>merge_prov1</code> and <code>merge_prov2</code> have the same structure, so we can merge them both to have all the data from different suppliers in one dataset.</p>
+<p>But remember that we created a registry id and 100% sure, some values will be repeated.</p>
+<p>To face this, we should better drop those columns and create a single id column for each observation.</p>
+<p>And after that, our sellout data combined with client data will be ready</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1"></a>merge_prov1.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb33-2"><a href="#cb33-2"></a>merge_prov2.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb33-3"><a href="#cb33-3"></a></span>
+<span id="cb33-4"><a href="#cb33-4"></a>display(merge_prov1.head(), merge_prov2.head())</span>
+<span id="cb33-5"><a href="#cb33-5"></a></span>
+<span id="cb33-6"><a href="#cb33-6"></a>merge_prov1.drop(<span class="st">&#39;id&#39;</span>, <span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb33-7"><a href="#cb33-7"></a>merge_prov2.drop(<span class="st">&#39;id&#39;</span>, <span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># Concat both DataFrames into one</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a>clients_sellout <span class="op">=</span> pd.concat([merge_prov1, merge_prov2], axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb34-3"><a href="#cb34-3"></a>clients_sellout.sort_values(by<span class="op">=</span><span class="st">&#39;date&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb34-4"><a href="#cb34-4"></a>clients_sellout.insert(<span class="dv">1</span>, <span class="st">&#39;id&#39;</span>, <span class="bu">range</span>(<span class="bu">len</span>(clients_sellout)))</span>
+<span id="cb34-5"><a href="#cb34-5"></a><span class="co"># check duplicated values, just in case</span></span>
+<span id="cb34-6"><a href="#cb34-6"></a><span class="bu">print</span>(<span class="ss">f&quot;duplicated values in clients_sellout: </span><span class="sc">{</span>clients_sellout<span class="sc">.</span>duplicated()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+</div>
+<section id="alright" class="cell markdown">
+<h2>ALRIGHT!</h2>
+<h3 id="now-our-historic-sellout-data-is-combined-with-information-about-our-clients">Now our historic sellout data is combined with information about our clients.</h3>
+<h4 id="as-we-mentioned-above-it-is-also-possible-to-combine-this-data-with-maestro_products-due-to-the-fact-that-they-both-have-a-sku-column">As we mentioned above, it is also possible to combine this data with <code>maestro_products</code> due to the fact that they both have a sku column</h4>
+<h3 id="lets-see-it">Let's see it</h3>
+</section>
+<div class="cell markdown">
+<p>Let's inspect <code>maestro_productos</code></p>
+<p>For this dataset, we will only see if there are some duplicated skus with different products.</p>
+<h3 id="in-case-we-find-observations-like-that-we-should-strongly-suggest-our-client-to-check-their-sku-data"><strong>In case we find observations like that, we should strongly suggest our client to check their sku data</strong></h3>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># There are no duplicated skus, so our data is ready to be merged</span></span>
+<span id="cb35-2"><a href="#cb35-2"></a>maestro_productos.sku.duplicated().<span class="bu">sum</span>()</span></code></pre></div>
+</div>
+<section id="time-for-merging" class="cell markdown">
+<h3><strong>TIME FOR MERGING</strong></h3>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"></a><span class="co"># Here&#39;s our final sellout data</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a>final_sellout_data <span class="op">=</span> clients_sellout.merge(maestro_productos, on<span class="op">=</span><span class="st">&#39;sku&#39;</span>)</span>
+<span id="cb36-3"><a href="#cb36-3"></a>DataAnalyzer.df_info(df<span class="op">=</span>final_sellout_data)</span></code></pre></div>
+</div>
+<section id="at-this-point-weve-detected-some-data-issues-related-to-sellout-datasets-and-combined-them-together" class="cell markdown">
+<h4>At this point, we've detected some data issues related to sellout datasets and combined them together.</h4>
+<p>We've dealt with some issues related with our data such as:</p>
+<ul>
+<li>removing 0 or less values</li>
+<li>creating a id to track every single operation</li>
+<li>checking if the merge was made successfully</li>
+</ul>
+</section>
+<section id="222-sellin-data" class="cell markdown">
+<h3><a id ='2.2.2.'>2.2.2. Sellin Data</a></h3>
+</section>
+<section id="now-its-time-to-apply-the-same-methodology-to-the-sellin-data" class="cell markdown">
+<h4>Now it's time to apply the same methodology to the Sellin Data.</h4>
+<p>At this point, we are getting a huge grasp of our data and begin to understand interrelations between datasets</p>
+<p>Once again, <code>sku</code> and <code>store_id</code> columns are suitable for merging.</p>
+<p>We've dealt with <code>maestro_clientes</code> &amp; <code>maestro_productos</code> idiosincrasy before, so we can merge it without inspecting it again.</p>
+</section>
+<div class="cell markdown">
+<p>First, we will check the historic date range for avoiding merging mistakes</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1"></a><span class="co"># For sellin</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a>years_sellin_tot <span class="op">=</span> sellin_total.groupby(sellin_total.date.dt.year).count()</span>
+<span id="cb37-3"><a href="#cb37-3"></a></span>
+<span id="cb37-4"><a href="#cb37-4"></a><span class="co">#For sellout</span></span>
+<span id="cb37-5"><a href="#cb37-5"></a>years_sellout_prov1 <span class="op">=</span> sellout_prov1.groupby(sellout_prov1.date.dt.year).count()</span>
+<span id="cb37-6"><a href="#cb37-6"></a>years_sellout_prov2 <span class="op">=</span> sellout_prov2.groupby(sellout_prov2.date.dt.year).count()</span>
+<span id="cb37-7"><a href="#cb37-7"></a></span>
+<span id="cb37-8"><a href="#cb37-8"></a><span class="bu">print</span>(<span class="st">&quot;***** SELLIN YEAR RANGE *****&quot;</span>)</span>
+<span id="cb37-9"><a href="#cb37-9"></a>display(years_sellin_tot)</span>
+<span id="cb37-10"><a href="#cb37-10"></a></span>
+<span id="cb37-11"><a href="#cb37-11"></a><span class="bu">print</span>()</span>
+<span id="cb37-12"><a href="#cb37-12"></a></span>
+<span id="cb37-13"><a href="#cb37-13"></a><span class="bu">print</span>(<span class="st">&quot;***** SELLOUT YEAR RANGE PER SUPPLIER *****&quot;</span>)</span>
+<span id="cb37-14"><a href="#cb37-14"></a>display(years_sellout_prov1, years_sellout_prov2)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<h3 id="very-interesting-insight-and-another-issue-to-report-to-our-client">Very interesting insight and another issue to report to our client.</h3>
+<ul>
+<li>Supplier 1 only has registries in 2017</li>
+<li>Supplier 2 only has registries in 2016</li>
+</ul>
+<p><b></b></p>
+<ul>
+<li>Sellin total info has registries since 2015</li>
+</ul>
+<h3 id="with-this-data-we-cannot-compare-how-both-suppliers-performed-during-the-same-year-but-we-can-track-each-supplier-separately-and-compare-them-with-sellin_total">With this data, we cannot compare how both suppliers performed during the same year, but we can track each supplier separately and compare them with sellin_total</h3>
+<h3 id="we-will-remove-data-from-2015-because-it-does-not-provide-info-about-our-suppliers">We will remove data from 2015 because it does not provide info about our suppliers</h3>
+<h2 id="now-we-realised-that-the-missing-data-from-merging-comes-from-this-lack-of-years-information">Now we realised that the missing data from merging comes from this lack of years information</h2>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1"></a>sellin_total <span class="op">=</span> sellin_total[(sellin_total[<span class="st">&#39;date&#39;</span>].dt.year <span class="op">!=</span> <span class="dv">2015</span>)]</span></code></pre></div>
+</div>
+<section id="from-our-previous-sellout-datasets-weve-seen-that-some-times-there-are-0-or-less-units-registered" class="cell markdown">
+<h3>From our previous sellout datasets, we've seen that some times there are 0 or less units registered.</h3>
+<p>Let's do the same with <code>sellin_total</code></p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1"></a>sellin_total.head()</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>We need to rename units to pieces in this case</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1"></a>sellin_total.rename(columns<span class="op">=</span>{<span class="st">&#39;pieces&#39;</span> : <span class="st">&#39;units&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1"></a>no_units_st <span class="op">=</span> sellin_total[sellin_total[<span class="st">&#39;units&#39;</span>] <span class="op">==</span> <span class="dv">0</span>]</span>
+<span id="cb41-2"><a href="#cb41-2"></a>less_zero_st <span class="op">=</span> sellin_total[sellin_total[<span class="st">&#39;units&#39;</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
+<span id="cb41-3"><a href="#cb41-3"></a></span>
+<span id="cb41-4"><a href="#cb41-4"></a><span class="bu">print</span>(<span class="ss">f&quot;Total rows with no units in sellin_total: </span><span class="sc">{</span>no_units_st<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb41-5"><a href="#cb41-5"></a></span>
+<span id="cb41-6"><a href="#cb41-6"></a><span class="bu">print</span>(<span class="st">&#39;----------------------------------&#39;</span>)</span>
+<span id="cb41-7"><a href="#cb41-7"></a><span class="co">#let&#39;s inspect how many registries have less than 0 units</span></span>
+<span id="cb41-8"><a href="#cb41-8"></a><span class="bu">print</span>(<span class="ss">f&quot;Total rows with less than 0 units in sellin_total: </span><span class="sc">{</span>less_zero_st<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb41-9"><a href="#cb41-9"></a></span>
+<span id="cb41-10"><a href="#cb41-10"></a><span class="bu">print</span>(<span class="st">&quot;###### SELLIN TOTAL PERCENTAGES ######&quot;</span>)</span>
+<span id="cb41-11"><a href="#cb41-11"></a><span class="bu">print</span>(<span class="st">&#39;Less than 0:&#39;</span>)</span>
+<span id="cb41-12"><a href="#cb41-12"></a>DataAnalyzer.check_data_percentage(df<span class="op">=</span>sellin_total, subset<span class="op">=</span>less_zero_st)</span>
+<span id="cb41-13"><a href="#cb41-13"></a><span class="bu">print</span>(<span class="st">&#39;Equal to 0:&#39;</span>)</span>
+<span id="cb41-14"><a href="#cb41-14"></a>DataAnalyzer.check_data_percentage(df<span class="op">=</span>sellin_total, subset<span class="op">=</span>no_units_st)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Again, this amount of data is irrelevant, so let's ignore it</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1"></a><span class="co"># Readjust the Dataframe</span></span>
+<span id="cb42-2"><a href="#cb42-2"></a>sellin_total <span class="op">=</span> sellin_total[sellin_total.units <span class="op">&gt;</span> <span class="dv">0</span>]</span></code></pre></div>
+</div>
+<section id="time-to-merge-it" class="cell markdown">
+<h3><strong>TIME TO MERGE IT</strong></h3>
+<p>Due to our previous investigation, we did not need to repeat steps</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1"></a>sellin_client <span class="op">=</span> sellin_total.merge(maestro_clientes)</span>
+<span id="cb43-2"><a href="#cb43-2"></a>DataAnalyzer.df_info(df<span class="op">=</span>sellin_client)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Check how our merge was made</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1"></a>subtract_sellin_client <span class="op">=</span> sellin_client.shape[<span class="dv">0</span>] <span class="op">-</span> sellin_total.shape[<span class="dv">0</span>]</span>
+<span id="cb44-2"><a href="#cb44-2"></a></span>
+<span id="cb44-3"><a href="#cb44-3"></a><span class="co"># We will ignore this difference because it implies very little data</span></span>
+<span id="cb44-4"><a href="#cb44-4"></a><span class="bu">print</span>(<span class="ss">f&quot;sellin_client difference: </span><span class="sc">{</span>subtract_sellin_client<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+</div>
+<section id="doing-the-same-with-maestro_productos" class="cell markdown">
+<h2><strong>Doing the same with <code>maestro_productos</code></strong></h2>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1"></a>sellin_client_product <span class="op">=</span> sellin_client.merge(maestro_productos)</span>
+<span id="cb45-2"><a href="#cb45-2"></a>DataAnalyzer.df_info(df<span class="op">=</span>sellin_client_product)</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1"></a>sellin_client_product</span></code></pre></div>
+</div>
+<section id="finally-we-successfully-merged-our-data" class="cell markdown">
+<h2><strong>Finally, we successfully merged our data</strong></h2>
+<h3 id="our-output-data-consists-on">Our output data consists on:</h3>
+<ul>
+<li><code>final_sellout_data</code></li>
+<li><code>sellin_client_product</code></li>
+</ul>
+</section>
+<section id="23-data-analysis" class="cell markdown">
+<h2><a id='2.3.'>2.3. Data Analysis</a></h2>
+<p>After having our data merged, we need to find insights from our resulting data.</p>
+<p>On the previous stage, we noticed some issues that should be reported to our client:</p>
+<ul>
+<li>after merging, very little observations did not merge successfully</li>
+<li>very few values were below or equal to zero</li>
+</ul>
+<p>Now is when we are going to see why these things are happening.</p>
+<p>First things first:</p>
+<ul>
+<li>We are going to tidy our dataset by:
+<ul>
+<li>changing column's names</li>
+<li>changing column's order</li>
+</ul></li>
+</ul>
+<p><b></b></p>
+<ul>
+<li>Later on:
+<ul>
+<li>Check our historic of sales to determine our date ranges</li>
+<li>Check values' distribution to see if there are some outliers that could unbalance our data</li>
+</ul></li>
+</ul>
+<p><b></b></p>
+<ul>
+<li>Finally:
+<ul>
+<li>Add some columns based on numeric data</li>
+</ul></li>
+</ul>
+</section>
+<div class="cell markdown">
+<p>1.1. Changing columns' names</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1"></a><span class="bu">print</span>(<span class="ss">f&quot;sellin_client_product columns:</span><span class="ch">\n</span><span class="ss"> </span><span class="sc">{</span>sellin_client_product<span class="sc">.</span>columns<span class="sc">}</span><span class="ch">\n</span><span class="ss">&quot;</span>)</span>
+<span id="cb47-2"><a href="#cb47-2"></a><span class="bu">print</span>()</span>
+<span id="cb47-3"><a href="#cb47-3"></a><span class="bu">print</span>(<span class="ss">f&quot;final_sellout_data columns:</span><span class="ch">\n</span><span class="ss"> </span><span class="sc">{</span>final_sellout_data<span class="sc">.</span>columns<span class="sc">}</span><span class="ch">\n</span><span class="ss">&quot;</span>)</span>
+<span id="cb47-4"><a href="#cb47-4"></a></span>
+<span id="cb47-5"><a href="#cb47-5"></a><span class="co"># rename the columns. pass them to english</span></span>
+<span id="cb47-6"><a href="#cb47-6"></a>sellin_client_product.rename(columns<span class="op">=</span>{</span>
+<span id="cb47-7"><a href="#cb47-7"></a>    <span class="st">&#39;nombre de tda&#39;</span> : <span class="st">&#39;store_name&#39;</span>,</span>
+<span id="cb47-8"><a href="#cb47-8"></a>    <span class="st">&#39;cadena&#39;</span>: <span class="st">&#39;supplier&#39;</span>,</span>
+<span id="cb47-9"><a href="#cb47-9"></a>    <span class="st">&#39;formato&#39;</span>: <span class="st">&#39;format&#39;</span>,</span>
+<span id="cb47-10"><a href="#cb47-10"></a>    <span class="st">&#39;municipio/ciudad&#39;</span> : <span class="st">&#39;municipality/city&#39;</span>, </span>
+<span id="cb47-11"><a href="#cb47-11"></a>    <span class="st">&#39;estado&#39;</span> : <span class="st">&#39;state&#39;</span>,</span>
+<span id="cb47-12"><a href="#cb47-12"></a>    <span class="st">&#39;deposito / distribuidor&#39;</span> : <span class="st">&#39;deposit/distributor&#39;</span>, </span>
+<span id="cb47-13"><a href="#cb47-13"></a>    <span class="st">&#39;estructura&#39;</span>: <span class="st">&#39;structure&#39;</span>,</span>
+<span id="cb47-14"><a href="#cb47-14"></a>    <span class="st">&#39;grado&#39;</span> : <span class="st">&#39;grade&#39;</span></span>
+<span id="cb47-15"><a href="#cb47-15"></a>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb47-16"><a href="#cb47-16"></a></span>
+<span id="cb47-17"><a href="#cb47-17"></a>final_sellout_data.rename(columns<span class="op">=</span>{</span>
+<span id="cb47-18"><a href="#cb47-18"></a>    <span class="st">&#39;nombre de tda&#39;</span> : <span class="st">&#39;store_name&#39;</span>, </span>
+<span id="cb47-19"><a href="#cb47-19"></a>    <span class="st">&#39;cadena&#39;</span> : <span class="st">&#39;supplier&#39;</span>, </span>
+<span id="cb47-20"><a href="#cb47-20"></a>    <span class="st">&#39;formato&#39;</span>: <span class="st">&#39;format&#39;</span>,</span>
+<span id="cb47-21"><a href="#cb47-21"></a>    <span class="st">&#39;municipio/ciudad&#39;</span> : <span class="st">&#39;municipality/city&#39;</span>, </span>
+<span id="cb47-22"><a href="#cb47-22"></a>    <span class="st">&#39;estado&#39;</span> : <span class="st">&#39;state&#39;</span>,</span>
+<span id="cb47-23"><a href="#cb47-23"></a>    <span class="st">&#39;deposito / distribuidor&#39;</span> : <span class="st">&#39;deposit/distributor&#39;</span>, </span>
+<span id="cb47-24"><a href="#cb47-24"></a>    <span class="st">&#39;estructura&#39;</span>: <span class="st">&#39;structure&#39;</span>,</span>
+<span id="cb47-25"><a href="#cb47-25"></a>    <span class="st">&#39;grado&#39;</span> : <span class="st">&#39;grade&#39;</span></span>
+<span id="cb47-26"><a href="#cb47-26"></a>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb47-27"><a href="#cb47-27"></a></span>
+<span id="cb47-28"><a href="#cb47-28"></a><span class="bu">print</span>(<span class="st">&#39;_______________________________________&#39;</span>)</span>
+<span id="cb47-29"><a href="#cb47-29"></a><span class="bu">print</span>()</span>
+<span id="cb47-30"><a href="#cb47-30"></a></span>
+<span id="cb47-31"><a href="#cb47-31"></a><span class="bu">print</span>(<span class="ss">f&quot;sellin_client_product columns after renaming:</span><span class="ch">\n</span><span class="ss"> </span><span class="sc">{</span>sellin_client_product<span class="sc">.</span>columns<span class="sc">}</span><span class="ch">\n</span><span class="ss">&quot;</span>)</span>
+<span id="cb47-32"><a href="#cb47-32"></a><span class="bu">print</span>()</span>
+<span id="cb47-33"><a href="#cb47-33"></a><span class="bu">print</span>(<span class="ss">f&quot;final_sellout_data columns after renaming:</span><span class="ch">\n</span><span class="ss"> </span><span class="sc">{</span>final_sellout_data<span class="sc">.</span>columns<span class="sc">}</span><span class="ch">\n</span><span class="ss">&quot;</span>)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>1.2. Changing column's order</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1"></a><span class="co"># We&#39;ll sort the data by date</span></span>
+<span id="cb48-2"><a href="#cb48-2"></a>sellin_client_product.sort_values(by<span class="op">=</span><span class="st">&#39;date&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb48-3"><a href="#cb48-3"></a></span>
+<span id="cb48-4"><a href="#cb48-4"></a><span class="co"># Create the id column</span></span>
+<span id="cb48-5"><a href="#cb48-5"></a>sellin_client_product.insert(<span class="dv">1</span>, <span class="st">&#39;id&#39;</span>, <span class="bu">range</span>(<span class="bu">len</span>(sellin_client_product)))</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1"></a>sellin_client_product.head()</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1"></a>final_sellout_data.head()</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1"></a>new_col_order_sellout <span class="op">=</span> [</span>
+<span id="cb51-2"><a href="#cb51-2"></a>    <span class="st">&#39;id&#39;</span>,</span>
+<span id="cb51-3"><a href="#cb51-3"></a>    <span class="st">&#39;date&#39;</span>, </span>
+<span id="cb51-4"><a href="#cb51-4"></a>    <span class="st">&#39;store_id&#39;</span>, </span>
+<span id="cb51-5"><a href="#cb51-5"></a>    <span class="st">&#39;format&#39;</span>,</span>
+<span id="cb51-6"><a href="#cb51-6"></a>    <span class="st">&#39;store_name&#39;</span>,</span>
+<span id="cb51-7"><a href="#cb51-7"></a>    <span class="st">&#39;structure&#39;</span>, </span>
+<span id="cb51-8"><a href="#cb51-8"></a>    <span class="st">&#39;division&#39;</span>,</span>
+<span id="cb51-9"><a href="#cb51-9"></a>    <span class="st">&#39;deposit/distributor&#39;</span>, </span>
+<span id="cb51-10"><a href="#cb51-10"></a>    <span class="st">&#39;state&#39;</span>,</span>
+<span id="cb51-11"><a href="#cb51-11"></a>    <span class="st">&#39;municipality/city&#39;</span>,</span>
+<span id="cb51-12"><a href="#cb51-12"></a>    <span class="st">&#39;supplier&#39;</span>, </span>
+<span id="cb51-13"><a href="#cb51-13"></a>    <span class="st">&#39;grade&#39;</span>,</span>
+<span id="cb51-14"><a href="#cb51-14"></a>    <span class="st">&#39;sku&#39;</span>,</span>
+<span id="cb51-15"><a href="#cb51-15"></a>    <span class="st">&#39;sku_description&#39;</span>,</span>
+<span id="cb51-16"><a href="#cb51-16"></a>    <span class="st">&#39;sku_category&#39;</span>,</span>
+<span id="cb51-17"><a href="#cb51-17"></a>    <span class="st">&#39;sku_subcategory&#39;</span>,</span>
+<span id="cb51-18"><a href="#cb51-18"></a>    <span class="st">&#39;units&#39;</span>,</span>
+<span id="cb51-19"><a href="#cb51-19"></a>    <span class="st">&#39;price&#39;</span></span>
+<span id="cb51-20"><a href="#cb51-20"></a>]</span>
+<span id="cb51-21"><a href="#cb51-21"></a></span>
+<span id="cb51-22"><a href="#cb51-22"></a><span class="co"># Sellout also has a margin column. To keep it </span></span>
+<span id="cb51-23"><a href="#cb51-23"></a>margin <span class="op">=</span> <span class="st">&#39;margin&#39;</span></span>
+<span id="cb51-24"><a href="#cb51-24"></a>new_col_order_sellin <span class="op">=</span> new_col_order_sellout.copy()</span>
+<span id="cb51-25"><a href="#cb51-25"></a>new_col_order_sellin.append(margin)</span>
+<span id="cb51-26"><a href="#cb51-26"></a></span>
+<span id="cb51-27"><a href="#cb51-27"></a><span class="co"># Reassign the variables to get the desired order</span></span>
+<span id="cb51-28"><a href="#cb51-28"></a>final_sellout_data <span class="op">=</span> final_sellout_data[new_col_order_sellout]</span>
+<span id="cb51-29"><a href="#cb51-29"></a>sellin_client_product <span class="op">=</span> sellin_client_product[new_col_order_sellin]</span></code></pre></div>
+</div>
+<section id="now-our-data-is-properly-formatted" class="cell markdown">
+<h3>Now our data is properly formatted</h3>
+</section>
+<div class="cell markdown">
+<p>2.2. Check values' distribution to see if there are some outliers that could unbalance our data</p>
+<p>We will do this only with our numeric valuable data:</p>
+<ul>
+<li><code>units</code></li>
+<li><code>price</code></li>
+<li><code>margin</code></li>
+</ul>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1"></a>sellin_describe <span class="op">=</span> sellin_client_product[[<span class="st">&#39;price&#39;</span>, <span class="st">&#39;units&#39;</span>, <span class="st">&#39;margin&#39;</span>]].describe().<span class="bu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb52-2"><a href="#cb52-2"></a>sellout_describe <span class="op">=</span> final_sellout_data[[<span class="st">&#39;price&#39;</span>, <span class="st">&#39;units&#39;</span>]].describe().<span class="bu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb52-3"><a href="#cb52-3"></a></span>
+<span id="cb52-4"><a href="#cb52-4"></a><span class="bu">print</span>(<span class="st">&quot;****** SELLIN DESCRIBE ******&quot;</span>)</span>
+<span id="cb52-5"><a href="#cb52-5"></a>display(sellin_describe)</span>
+<span id="cb52-6"><a href="#cb52-6"></a><span class="bu">print</span>()</span>
+<span id="cb52-7"><a href="#cb52-7"></a><span class="bu">print</span>(<span class="st">&quot;****** SELLOUT DESCRIBE ******&quot;</span>)</span>
+<span id="cb52-8"><a href="#cb52-8"></a></span>
+<span id="cb52-9"><a href="#cb52-9"></a>display(sellout_describe)</span></code></pre></div>
+</div>
+<section id="in-the-second-dataframe-we-can-see-that-there-is-a-negative-price" class="cell markdown">
+<h2>In the second dataframe, we can see that there is a negative price.</h2>
+<p>We're going to inspect it to see the total amount of negative prices and, if it is irrelevant, we will erase it once again</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1"></a>no_price_final_sellout, less_zero_final_sellout <span class="op">=</span> DataAnalyzer.less_zero_units(df<span class="op">=</span>final_sellout_data, col<span class="op">=</span><span class="st">&#39;price&#39;</span>)</span>
+<span id="cb53-2"><a href="#cb53-2"></a></span>
+<span id="cb53-3"><a href="#cb53-3"></a><span class="bu">print</span>()</span>
+<span id="cb53-4"><a href="#cb53-4"></a><span class="bu">print</span>(<span class="st">&quot;###### final_sellout_data ######&quot;</span>)</span>
+<span id="cb53-5"><a href="#cb53-5"></a><span class="bu">print</span>(<span class="st">&#39;Less than 0:&#39;</span>)</span>
+<span id="cb53-6"><a href="#cb53-6"></a>DataAnalyzer.check_data_percentage(df<span class="op">=</span>final_sellout_data, subset<span class="op">=</span>less_zero_final_sellout)</span>
+<span id="cb53-7"><a href="#cb53-7"></a><span class="bu">print</span>(<span class="st">&#39;Equal to 0:&#39;</span>)</span>
+<span id="cb53-8"><a href="#cb53-8"></a>DataAnalyzer.check_data_percentage(df<span class="op">=</span>final_sellout_data, subset<span class="op">=</span>no_price_final_sellout)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Delete them</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1"></a>final_sellout_data[final_sellout_data[<span class="st">&#39;price&#39;</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1"></a>final_sellout_data <span class="op">=</span> final_sellout_data[final_sellout_data.price <span class="op">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb55-2"><a href="#cb55-2"></a>sellout_describe <span class="op">=</span> final_sellout_data[[<span class="st">&#39;price&#39;</span>, <span class="st">&#39;units&#39;</span>]].describe().<span class="bu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb55-3"><a href="#cb55-3"></a>display(sellout_describe)</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1"></a>sellin_client_product.head()</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<h3 id="add-some-columns-based-on-numeric-data">Add some columns based on numeric data</h3>
+<p>After analyzing some prices, we've found out that the price column is price per unit.</p>
+<h3 id="we-will-create-a-total-column-by-multiplying-units-per-price-in-each-row">We will create a <code>total</code> column by multiplying units per price in each row</h3>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1"></a><span class="co"># rename price column</span></span>
+<span id="cb57-2"><a href="#cb57-2"></a>sellin_client_product.rename(columns<span class="op">=</span>{<span class="st">&#39;price&#39;</span> : <span class="st">&#39;unit_price&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb57-3"><a href="#cb57-3"></a>final_sellout_data.rename(columns<span class="op">=</span>{<span class="st">&#39;price&#39;</span> : <span class="st">&#39;unit_price&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb57-4"><a href="#cb57-4"></a></span>
+<span id="cb57-5"><a href="#cb57-5"></a><span class="co"># creating total column</span></span>
+<span id="cb57-6"><a href="#cb57-6"></a></span>
+<span id="cb57-7"><a href="#cb57-7"></a>sellin_client_product[<span class="st">&#39;total&#39;</span>] <span class="op">=</span> sellin_client_product.units <span class="op">*</span> sellin_client_product.unit_price</span>
+<span id="cb57-8"><a href="#cb57-8"></a>final_sellout_data[<span class="st">&#39;total&#39;</span>] <span class="op">=</span> final_sellout_data.units <span class="op">*</span> final_sellout_data.unit_price</span></code></pre></div>
+</div>
+<section id="we-will-create-a-total_margin-column-by-multiplying-units-per-margin-in-each-row" class="cell markdown">
+<h3>We will create a <code>total_margin</code> column by multiplying units per margin in each row</h3>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1"></a><span class="co"># rename price column</span></span>
+<span id="cb58-2"><a href="#cb58-2"></a>sellin_client_product.rename(columns<span class="op">=</span>{<span class="st">&#39;margin&#39;</span> : <span class="st">&#39;unit_margin&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb58-3"><a href="#cb58-3"></a></span>
+<span id="cb58-4"><a href="#cb58-4"></a><span class="co"># Creating total_margin column</span></span>
+<span id="cb58-5"><a href="#cb58-5"></a>sellin_client_product[<span class="st">&#39;total_margin&#39;</span>] <span class="op">=</span> sellin_client_product.units <span class="op">*</span> sellin_client_product.unit_margin</span></code></pre></div>
+</div>
+<section id="at-this-moment-our-data-is-analyzed-and-structured" class="cell markdown">
+<h2>At this moment, our data is analyzed and structured.</h2>
+<h3 id="maybe-we-will-need-to-make-some-adjustments-later">Maybe we will need to make some adjustments later.</h3>
+<h3 id="but-for-now-its-enough-so-were-saving-it-to-make-some-exploration">But for now, it's enough, so we're saving it to make some exploration</h3>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1"></a>Saver.save_output_file(df<span class="op">=</span>final_sellout_data, filename<span class="op">=</span><span class="st">&#39;sellout_final_baseline&#39;</span>, path<span class="op">=</span>config.OUTPUT_PATH)</span>
+<span id="cb59-2"><a href="#cb59-2"></a>Saver.save_output_file(df<span class="op">=</span>sellin_client_product, filename<span class="op">=</span><span class="st">&#39;sellin_final_baseline&#39;</span>, path<span class="op">=</span>config.OUTPUT_PATH)</span></code></pre></div>
+</div>
+<section id="231-checking-outliers" class="cell markdown">
+<h3><a id='2.3.1.'>2.3.1. Checking outliers</a></h3>
+<h4 id="we-will-analyse-how-our-data-is-distributed-in-only-3-columns">We will analyse how our data is distributed in only 3 columns:</h4>
+<ul>
+<li><code>units</code></li>
+<li><code>prices</code></li>
+<li><code>total</code></li>
+</ul>
+<p>We will do it based on the IQR (interquartile range)</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1"></a>sellin_numeric_data <span class="op">=</span> sellin_client_product[[<span class="st">&#39;unit_price&#39;</span>, <span class="st">&#39;units&#39;</span>, <span class="st">&#39;total&#39;</span>, <span class="st">&#39;id&#39;</span>]]</span>
+<span id="cb60-2"><a href="#cb60-2"></a>sellout_numeric_data <span class="op">=</span> final_sellout_data[[<span class="st">&#39;unit_price&#39;</span>, <span class="st">&#39;units&#39;</span>, <span class="st">&#39;total&#39;</span>, <span class="st">&#39;id&#39;</span>]]</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1"></a><span class="co"># For sellin data</span></span>
+<span id="cb61-2"><a href="#cb61-2"></a>sellin_Q1 <span class="op">=</span> sellin_numeric_data.quantile(<span class="fl">0.25</span>)</span>
+<span id="cb61-3"><a href="#cb61-3"></a>sellin_Q3 <span class="op">=</span> sellin_numeric_data.quantile(<span class="fl">0.75</span>)</span>
+<span id="cb61-4"><a href="#cb61-4"></a></span>
+<span id="cb61-5"><a href="#cb61-5"></a>sellin_IQR <span class="op">=</span> sellin_Q3 <span class="op">-</span> sellin_Q1</span>
+<span id="cb61-6"><a href="#cb61-6"></a></span>
+<span id="cb61-7"><a href="#cb61-7"></a><span class="co"># Same for sellout</span></span>
+<span id="cb61-8"><a href="#cb61-8"></a>sellout_Q1 <span class="op">=</span> sellout_numeric_data.quantile(<span class="fl">0.25</span>)</span>
+<span id="cb61-9"><a href="#cb61-9"></a>sellout_Q3 <span class="op">=</span> sellout_numeric_data.quantile(<span class="fl">0.75</span>)</span>
+<span id="cb61-10"><a href="#cb61-10"></a></span>
+<span id="cb61-11"><a href="#cb61-11"></a>sellout_IQR <span class="op">=</span> sellout_Q3 <span class="op">-</span> sellout_Q1</span>
+<span id="cb61-12"><a href="#cb61-12"></a></span>
+<span id="cb61-13"><a href="#cb61-13"></a><span class="bu">print</span>(<span class="st">&quot;****** SELLIN IQR ******&quot;</span>)</span>
+<span id="cb61-14"><a href="#cb61-14"></a><span class="bu">print</span>(sellin_IQR)</span>
+<span id="cb61-15"><a href="#cb61-15"></a><span class="bu">print</span>()</span>
+<span id="cb61-16"><a href="#cb61-16"></a></span>
+<span id="cb61-17"><a href="#cb61-17"></a><span class="bu">print</span>(<span class="st">&quot;****** SELLOUT IQR ******&quot;</span>)</span>
+<span id="cb61-18"><a href="#cb61-18"></a><span class="bu">print</span>(sellout_IQR)</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1"></a>sellin_without_outliers <span class="op">=</span> sellin_numeric_data[<span class="op">~</span>((sellin_numeric_data <span class="op">&lt;</span> (sellin_Q1 <span class="op">-</span> <span class="fl">1.5</span> <span class="op">*</span> sellin_IQR)) <span class="op">|</span>(sellin_numeric_data <span class="op">&gt;</span> (sellin_Q3 <span class="op">+</span> <span class="fl">1.5</span> <span class="op">*</span> sellin_IQR))).<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">1</span>)]</span>
+<span id="cb62-2"><a href="#cb62-2"></a>sellout_without_outliers <span class="op">=</span> sellout_numeric_data[<span class="op">~</span>((sellout_numeric_data <span class="op">&lt;</span> (sellout_Q1 <span class="op">-</span> <span class="fl">1.5</span> <span class="op">*</span> sellout_IQR)) <span class="op">|</span>(sellout_numeric_data <span class="op">&gt;</span> (sellout_Q3 <span class="op">+</span> <span class="fl">1.5</span> <span class="op">*</span> sellout_IQR))).<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">1</span>)]</span>
+<span id="cb62-3"><a href="#cb62-3"></a></span>
+<span id="cb62-4"><a href="#cb62-4"></a><span class="co"># Checking their shapes</span></span>
+<span id="cb62-5"><a href="#cb62-5"></a><span class="bu">print</span>(<span class="ss">f&quot;Sellin without outliers df shape; </span><span class="sc">{</span>sellin_without_outliers<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb62-6"><a href="#cb62-6"></a><span class="bu">print</span>(<span class="ss">f&quot;Sellout without outliers df shape: </span><span class="sc">{</span>sellout_without_outliers<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Once again, inspect how much data is inside the outliers df</p>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1"></a>DataAnalyzer.check_data_percentage(df<span class="op">=</span>sellin_numeric_data, subset<span class="op">=</span>sellin_without_outliers)</span>
+<span id="cb63-2"><a href="#cb63-2"></a><span class="bu">print</span>()</span>
+<span id="cb63-3"><a href="#cb63-3"></a>DataAnalyzer.check_data_percentage(df<span class="op">=</span>sellout_numeric_data, subset<span class="op">=</span>sellout_without_outliers)</span></code></pre></div>
+</div>
+<section id="as-we-can-see-in-the-cell-above-more-than-three-quarters-of-the-data-are-in-the-normal-boundaries" class="cell markdown">
+<h3>As we can see in the cell above, more than three quarters of the data are in the 'normal' boundaries.</h3>
+<h4 id="we-will-save-this-outlier-data-in-case-we-want-to-analyze-it-in-detail-but-for-the-moment-we-will-stop-including-it-in-our-analysis">We will save this outlier data in case we want to analyze it in detail, but for the moment, we will stop including it in our analysis.</h4>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1"></a><span class="co"># Define our outlier data</span></span>
+<span id="cb64-2"><a href="#cb64-2"></a>sellin_final_outliers <span class="op">=</span> sellin_client_product.merge(sellin_without_outliers, on<span class="op">=</span>[<span class="st">&#39;id&#39;</span>, <span class="st">&#39;unit_price&#39;</span>, <span class="st">&#39;units&#39;</span>, <span class="st">&#39;total&#39;</span>], how<span class="op">=</span><span class="st">&#39;outer&#39;</span>)</span>
+<span id="cb64-3"><a href="#cb64-3"></a>sellout_final_outliers <span class="op">=</span> final_sellout_data.merge(sellout_without_outliers, on<span class="op">=</span>[<span class="st">&#39;id&#39;</span>, <span class="st">&#39;unit_price&#39;</span>, <span class="st">&#39;units&#39;</span>, <span class="st">&#39;total&#39;</span>], how<span class="op">=</span><span class="st">&#39;outer&#39;</span>)</span>
+<span id="cb64-4"><a href="#cb64-4"></a></span>
+<span id="cb64-5"><a href="#cb64-5"></a><span class="co">#Save it</span></span>
+<span id="cb64-6"><a href="#cb64-6"></a>Saver.save_output_file(df<span class="op">=</span>sellout_final_outliers, path<span class="op">=</span>config.OUTPUT_PATH, filename<span class="op">=</span><span class="st">&#39;sellout_outliers&#39;</span>)</span>
+<span id="cb64-7"><a href="#cb64-7"></a>Saver.save_output_file(df<span class="op">=</span>sellin_final_outliers, path<span class="op">=</span>config.OUTPUT_PATH, filename<span class="op">=</span><span class="st">&#39;sellin_outliers&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Reassigning our data to only keep values inside our boundaries</p>
+<ul>
+<li><code>sellin_final</code></li>
+<li><code>sellout_final</code></li>
+</ul>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1"></a><span class="co"># Merge our sellin and sellout df to the data inside the boundaries</span></span>
+<span id="cb65-2"><a href="#cb65-2"></a>sellin_final <span class="op">=</span> sellin_client_product.merge(sellin_without_outliers, on<span class="op">=</span>[<span class="st">&#39;id&#39;</span>, <span class="st">&#39;unit_price&#39;</span>, <span class="st">&#39;units&#39;</span>, <span class="st">&#39;total&#39;</span>], how<span class="op">=</span><span class="st">&#39;inner&#39;</span>)</span>
+<span id="cb65-3"><a href="#cb65-3"></a>sellout_final <span class="op">=</span> final_sellout_data.merge(sellout_without_outliers, on<span class="op">=</span>[<span class="st">&#39;id&#39;</span>, <span class="st">&#39;unit_price&#39;</span>, <span class="st">&#39;units&#39;</span>, <span class="st">&#39;total&#39;</span>], how<span class="op">=</span><span class="st">&#39;inner&#39;</span>)</span>
+<span id="cb65-4"><a href="#cb65-4"></a></span>
+<span id="cb65-5"><a href="#cb65-5"></a><span class="co"># Compare length with the dataframes without outliers to check if the merge was done properly</span></span>
+<span id="cb65-6"><a href="#cb65-6"></a><span class="bu">print</span>(<span class="ss">f&quot;****** SELLIN DATA ******&quot;</span>)</span>
+<span id="cb65-7"><a href="#cb65-7"></a><span class="bu">print</span>(<span class="ss">f&quot;sellin_final length: </span><span class="sc">{</span><span class="bu">len</span>(sellin_final)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb65-8"><a href="#cb65-8"></a><span class="bu">print</span>(<span class="ss">f&quot;sellin_without_outliers length: </span><span class="sc">{</span><span class="bu">len</span>(sellin_without_outliers)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb65-9"><a href="#cb65-9"></a><span class="bu">print</span>()</span>
+<span id="cb65-10"><a href="#cb65-10"></a><span class="bu">print</span>(<span class="ss">f&quot;****** SELLOUT DATA ******&quot;</span>)</span>
+<span id="cb65-11"><a href="#cb65-11"></a><span class="bu">print</span>(<span class="ss">f&quot;sellout_final length: </span><span class="sc">{</span><span class="bu">len</span>(sellout_final)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb65-12"><a href="#cb65-12"></a><span class="bu">print</span>(<span class="ss">f&quot;sellout_without_outliers length: </span><span class="sc">{</span><span class="bu">len</span>(sellout_without_outliers)<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+</div>
+<section id="finally-we-will-save-our-data" class="cell markdown">
+<h2>Finally, we will save our data</h2>
+<h3 id="now-the-data-scientist-team-has-all-datasets-condensed-in-one-file-that-is-properly-formatted-and-ready-for-training-a-model">Now the Data Scientist team has all datasets condensed in one file that is properly formatted and ready for training a model</h3>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1"></a>Saver.save_output_file(df<span class="op">=</span>sellin_final, path<span class="op">=</span>config.OUTPUT_PATH, filename<span class="op">=</span><span class="st">&#39;sellin_final&#39;</span>)</span>
+<span id="cb66-2"><a href="#cb66-2"></a>Saver.save_output_file(df<span class="op">=</span>sellout_final, path<span class="op">=</span>config.OUTPUT_PATH, filename<span class="op">=</span><span class="st">&#39;sellout_final&#39;</span>)</span></code></pre></div>
+</div>
+<section id="3-data-visualization" class="cell markdown">
+<h1><a id='3'>3. Data Visualization</a></h1>
+<h3 id="once-our-data-is-structured-its-time-to-make-some-data-viz-to-get-a-consistent-sense-of-it">Once our data is structured, it's time to make some data viz to get a consistent sense of it.</h3>
+<h4 id="although-some-columns-may-seem-obvious-here-are-some-definitions-of-the-ones-that-can-be-misleading">Although some columns may seem obvious, here are some definitions of the ones that can be misleading:</h4>
+<ul>
+<li><code>grade</code>: Is related with the Areas in which AC Nielsen divides the country of Mexico.
+<ul>
+<li>These areas are divided based on economic criteria.</li>
+<li>For further detail: check this <a href="https://docplayer.es/18341200-Consumo-del-nivel-socioeconomico-bajo-nielsen-homescan.html">url</a></li>
+<li>The <code>documentation</code> directory has 2 maps of the area distribution.</li>
+</ul></li>
+</ul>
+</section>
+<section id="now-that-we-have-the-data-in-the-right-format-for-the-data-science-department-we-will-make-some-tests-in-another-jupyter-notebook-to-make-some-data-visualizations" class="cell markdown">
+<h2>Now that we have the data in the right format for the Data Science department, we will make some tests in another jupyter notebook to make some data visualizations.</h2>
+<h4 id="the-most-insightful-ones-will-appear-in-the-current-notebook">The most insightful ones will appear in the current notebook</h4>
+<h3 id="in-case-you-want-to-check-it-go-to-the-notebooks-folder">In case you want to check it, go to the <code>notebooks</code> folder</h3>
+</section>
+<section id="31-profile-report" class="cell markdown">
+<h3><a id='3.1.'>3.1. Profile Report</a></h3>
+<h4 id="to-have-a-deeper-knowledge-on-our-data-we-will-use-pandas_profilingprofilereport-method-to-easily-get-a-deeper-sense-of-both-datasets">To have a deeper knowledge on our data, we will use <code>pandas_profiling.ProfileReport()</code> method to easily get a deeper sense of both datasets</h4>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1"></a><span class="co"># Assign variables for each dataset</span></span>
+<span id="cb67-2"><a href="#cb67-2"></a>sellout_report <span class="op">=</span> ProfileReport(sellout_final, title<span class="op">=</span> <span class="st">&#39;Sell-out Report&#39;</span>, explorative<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb67-3"><a href="#cb67-3"></a>sellin_report <span class="op">=</span> ProfileReport(sellin_final, title<span class="op">=</span> <span class="st">&#39;Sell-in Report&#39;</span>, explorative<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb67-4"><a href="#cb67-4"></a></span>
+<span id="cb67-5"><a href="#cb67-5"></a><span class="co"># Save them in the reports folder</span></span>
+<span id="cb67-6"><a href="#cb67-6"></a>sellout_report.to_file(config.REPORTS_PATH <span class="op">+</span> config.SEP <span class="op">+</span> <span class="st">&#39;sellout_report.html&#39;</span>)</span>
+<span id="cb67-7"><a href="#cb67-7"></a>sellin_report.to_file(config.REPORTS_PATH <span class="op">+</span> config.SEP <span class="op">+</span> <span class="st">&#39;sellin_report.html&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1"></a>sellin_report</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1"></a>sellout_report</span></code></pre></div>
+</div>
+<section id="32-sellin-visualizations" class="cell markdown">
+<h3><a id='3.2.'>3.2. Sellin Visualizations</a></h3>
+</section>
+<section id="time-to-analyse-sellin-data-in-this-stage-we-will-do-some-visualizations" class="cell markdown">
+<h4>Time to analyse sellin data. In this stage, we will do some visualizations:</h4>
+<ul>
+<li>Heatmap to see correlations between variables.</li>
+<li>Treemaps:
+<ul>
+<li>A treemap to see the total amount of sellin units per category.</li>
+<li>A treemap to see the total units sold to each supplier.</li>
+</ul></li>
+<li>A sunburst to see the total amount of units sold per Nielsen Area.</li>
+<li>Bar plots
+<ul>
+<li>A Bar plot to see the states that sell the most.</li>
+<li>Total Sell-in unit Margin per Nielsen Area</li>
+</ul></li>
+<li>A histogram to see the total sellin margin revenue per Nielsen Area.</li>
+<li>Violin plot o see how unit prices are distributed</li>
+</ul>
+</section>
+<section id="heatmap" class="cell markdown">
+<h3>Heatmap</h3>
+</section>
+<section id="sell-in-heatmap-to-see-correlations-between-variables" class="cell markdown">
+<h4>Sell-in heatmap to see correlations between variables</h4>
+<p>As it can be seen in the following chart, <code>unit_margin</code> and <code>unit_price</code> seem to have some linear correlation. It will be advisable to ask our client if they are aware of it.</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1"></a>Viz.draw_heatmap(df_corr<span class="op">=</span>sellin_final.corr(), title<span class="op">=</span><span class="st">&quot;Sell-in Heatmap&quot;</span>, path<span class="op">=</span>config.STATIC_PATH, filename<span class="op">=</span><span class="st">&#39;sellin_heatmap&#39;</span>, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="treemaps" class="cell markdown">
+<h3>Treemaps</h3>
+</section>
+<section id="treemap-to-see-the-total-amount-of-sellin-units-per-category" class="cell markdown">
+<h4>Treemap to see the total amount of sellin units per category.</h4>
+<p>More than three quarters of the product stock are sugar-free. Super-flavour products are, on average, more expensive though.</p>
+<p>We'll see later how those products behave in the sellout dataset</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1"></a>path<span class="op">=</span>[<span class="st">&#39;sku_category&#39;</span>, <span class="st">&#39;sku_subcategory&#39;</span>, <span class="st">&#39;sku_description&#39;</span>]</span>
+<span id="cb71-2"><a href="#cb71-2"></a>values <span class="op">=</span> <span class="st">&#39;units&#39;</span></span>
+<span id="cb71-3"><a href="#cb71-3"></a>color <span class="op">=</span> <span class="st">&#39;unit_price&#39;</span></span>
+<span id="cb71-4"><a href="#cb71-4"></a>title <span class="op">=</span> <span class="st">&#39;Total Sell-in Units Sold per Sku Category&#39;</span></span>
+<span id="cb71-5"><a href="#cb71-5"></a>filename <span class="op">=</span> <span class="st">&#39;tot_sellin_units_per_cat&#39;</span></span>
+<span id="cb71-6"><a href="#cb71-6"></a>Viz.draw_treemap(df<span class="op">=</span>sellin_final, html_path<span class="op">=</span>config.HTML_PATH, path<span class="op">=</span>path,</span>
+<span id="cb71-7"><a href="#cb71-7"></a>filename<span class="op">=</span>filename, title<span class="op">=</span>title, color<span class="op">=</span>color, values<span class="op">=</span>values, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="a-treemap-to-see-the-total-units-sold-to-each-supplier" class="cell markdown">
+<h4>A treemap to see the total units sold to each supplier.</h4>
+<p><code>proveedor_2</code> is by far, the biggest supplier in terms of units ordered. It also delivers to a lot of different store formats. Nevertheless, <code>proveedor_1</code> is focused on Shop and Great shop formats. Depending on the Nielsen area, it is possible that <code>proveedor_1</code> could be a valuable asset, because the formats they supply to can have a very specific target.</p>
+<p>This would definately need a deeper research and it would be advisable to make some panels to see how consumers behave depending on the store format.</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1"></a>path<span class="op">=</span>[<span class="st">&#39;supplier&#39;</span>, <span class="st">&#39;format&#39;</span>, <span class="st">&#39;sku_category&#39;</span>, <span class="st">&#39;sku_subcategory&#39;</span>, <span class="st">&#39;sku_description&#39;</span>]</span>
+<span id="cb72-2"><a href="#cb72-2"></a>values <span class="op">=</span> <span class="st">&#39;units&#39;</span></span>
+<span id="cb72-3"><a href="#cb72-3"></a>color <span class="op">=</span> <span class="st">&#39;unit_price&#39;</span></span>
+<span id="cb72-4"><a href="#cb72-4"></a>title <span class="op">=</span> <span class="st">&#39;Total Sell-in Units Sold to Suppliers&#39;</span></span>
+<span id="cb72-5"><a href="#cb72-5"></a>filename <span class="op">=</span> <span class="st">&#39;tot_sellin_units_sold_to_suppliers&#39;</span></span>
+<span id="cb72-6"><a href="#cb72-6"></a>Viz.draw_treemap(df<span class="op">=</span>sellin_final, html_path<span class="op">=</span>config.HTML_PATH, path<span class="op">=</span>path,</span>
+<span id="cb72-7"><a href="#cb72-7"></a>filename<span class="op">=</span>filename, title<span class="op">=</span>title, color<span class="op">=</span>color, values<span class="op">=</span>values, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="sunburst" class="cell markdown">
+<h3>Sunburst</h3>
+</section>
+<section id="sunburst-to-see-the-total-amount-of-units-sold-per-nielsen-area" class="cell markdown">
+<h4>Sunburst to see the total amount of units sold per Nielsen Area.</h4>
+<p><code>grade IV</code> and <code>grade V</code> Nielsen Areas concentrate the majority of sell-in units sold. However, some states inside <code>VI</code> and <code>III</code> areas have a <code>unit_price</code> average amount significantly high.</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1"></a>path<span class="op">=</span>[<span class="st">&#39;grade&#39;</span>, <span class="st">&#39;state&#39;</span>]</span>
+<span id="cb73-2"><a href="#cb73-2"></a>values <span class="op">=</span> <span class="st">&#39;units&#39;</span></span>
+<span id="cb73-3"><a href="#cb73-3"></a>color <span class="op">=</span> <span class="st">&#39;unit_price&#39;</span></span>
+<span id="cb73-4"><a href="#cb73-4"></a>title <span class="op">=</span> <span class="st">&#39;Total Sell-in Units Sold per Nielsen Area&#39;</span></span>
+<span id="cb73-5"><a href="#cb73-5"></a>filename <span class="op">=</span> <span class="st">&#39;tot_sellin_units_per_nielsen_area&#39;</span></span>
+<span id="cb73-6"><a href="#cb73-6"></a>Viz.draw_sunburst(df<span class="op">=</span>sellin_final, html_path<span class="op">=</span>config.HTML_PATH, path<span class="op">=</span>path,</span>
+<span id="cb73-7"><a href="#cb73-7"></a>filename<span class="op">=</span>filename, title<span class="op">=</span>title, color<span class="op">=</span>color, values<span class="op">=</span>values, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="barplots" class="cell markdown">
+<h3>Barplots</h3>
+</section>
+<section id="a-barplot-to-see-the-states-that-sell-the-most" class="cell markdown">
+<h4>A Barplot to see the states that sell the most.</h4>
+<p><code>Alloralf</code> and <code>Magornmar</code>(states inside the IV and V Nielsen Area, respectively) are, by far, the top selling states in terms of units.</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb74"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1"></a>tot_sellin_units_per_state <span class="op">=</span> sellin_final.groupby(<span class="st">&#39;state&#39;</span>, as_index<span class="op">=</span><span class="va">False</span>).<span class="bu">sum</span>(<span class="st">&#39;total&#39;</span>).sort_values(by<span class="op">=</span><span class="st">&#39;total&#39;</span>, ascending<span class="op">=</span><span class="va">False</span>).head()</span>
+<span id="cb74-2"><a href="#cb74-2"></a></span>
+<span id="cb74-3"><a href="#cb74-3"></a>Viz.draw_barplot(tot_sellin_units_per_state, x<span class="op">=</span><span class="st">&#39;state&#39;</span>, y<span class="op">=</span><span class="st">&#39;total&#39;</span>, title<span class="op">=</span><span class="st">&#39;Total Sell-in Revenue per State&#39;</span>, path<span class="op">=</span>config.HTML_PATH, filename<span class="op">=</span><span class="st">&#39;total_sellin_revenue_per_state&#39;</span>, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="total-sell-in-unit-margin-per-nielsen-area" class="cell markdown">
+<h4>Total Sell-in unit Margin per Nielsen Area</h4>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1"></a>Viz.draw_barplot(sellin_final, x<span class="op">=</span><span class="st">&#39;grade&#39;</span>, y<span class="op">=</span><span class="st">&#39;unit_margin&#39;</span>, title<span class="op">=</span><span class="st">&#39;Total Sell-in Margin per Nielsen Area&#39;</span>, path<span class="op">=</span>config.HTML_PATH, filename<span class="op">=</span><span class="st">&#39;total_sellin_margin_per_NA&#39;</span>, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="histogram" class="cell markdown">
+<h3>Histogram</h3>
+</section>
+<section id="a-histogram-to-see-the-total-sellin-margin-revenue-per-nielsen-area" class="cell markdown">
+<h4>A histogram to see the total sellin margin revenue per Nielsen Area.</h4>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb76"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1"></a>Viz.draw_histogram(df<span class="op">=</span>sellin_final, x<span class="op">=</span><span class="st">&#39;grade&#39;</span>, y<span class="op">=</span><span class="st">&#39;total_margin&#39;</span>, title<span class="op">=</span><span class="st">&#39;Total Sell-in Margin Revenue per Nielsen Area&#39;</span>, filename<span class="op">=</span><span class="st">&#39;sellin_tot_margin_revenue_per_NA&#39;</span>, path<span class="op">=</span>config.HTML_PATH, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="violin-plot" class="cell markdown">
+<h3>Violin Plot</h3>
+</section>
+<section id="violin-plot-o-see-how-unit-prices-are-distributed" class="cell markdown">
+<h4>Violin plot o see how unit prices are distributed</h4>
+<p>You can notice the gap of products inside the 20/30 dollar treshold and a concentration of prices between 10 and 15 dollars</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1"></a>Viz.draw_violinplot(df<span class="op">=</span>sellin_final, col<span class="op">=</span><span class="st">&#39;unit_price&#39;</span>, title<span class="op">=</span><span class="st">&#39;Sell-in Unit Price Distribution&#39;</span>, path<span class="op">=</span>config.STATIC_PATH, filename<span class="op">=</span><span class="st">&#39;sellin_price_distribution&#39;</span>, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="33-sellout-visualizations" class="cell markdown">
+<h3><a id='3.3.'>3.3. Sellout Visualizations</a></h3>
+</section>
+<section id="for-the-sellout-data-we-will-make-very-similar-visualizations" class="cell markdown">
+<h4>For the sellout data, we will make very similar visualizations.</h4>
+<ul>
+<li>Heatmap to see correlations between variables.</li>
+<li>Treemaps:
+<ul>
+<li>A treemap to see the total amount of sellin units per category.</li>
+<li>A treemap to see the total units sold to each supplier.</li>
+</ul></li>
+<li>A sunburst to see the total amount of units sold per Nielsen Area.</li>
+<li>Bar plots
+<ul>
+<li>A Bar plot to see the states that sell the most.</li>
+<li>Total Sell-in unit Margin per Nielsen Area</li>
+</ul></li>
+<li>A histogram to see the total sellin margin revenue per Nielsen Area.</li>
+<li>Violin plot o see how unit prices are distributed</li>
+</ul>
+</section>
+<section id="heatmap" class="cell markdown">
+<h3>Heatmap</h3>
+</section>
+<section id="sell-out-heatmap-to-see-correlations-between-variables" class="cell markdown">
+<h4>Sell-out heatmap to see correlations between variables</h4>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb78"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1"></a>Viz.draw_heatmap(df_corr<span class="op">=</span>sellout_final.corr(), title<span class="op">=</span><span class="st">&quot;Sell-out Heatmap&quot;</span>, path<span class="op">=</span>config.STATIC_PATH, filename<span class="op">=</span><span class="st">&#39;sellout_heatmap&#39;</span>, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="treemaps" class="cell markdown">
+<h3>Treemaps</h3>
+</section>
+<section id="treemap-to-see-the-total-amount-of-sellin-units-per-category" class="cell markdown">
+<h4>Treemap to see the total amount of sellin units per category.</h4>
+<p>As it is logical, unit prices average is higher than in the sellin dataset. Here we can see that sugar-free products experiment a significant increase in terms of unit price.</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1"></a>path<span class="op">=</span>[<span class="st">&#39;sku_category&#39;</span>, <span class="st">&#39;sku_subcategory&#39;</span>, <span class="st">&#39;sku_description&#39;</span>]</span>
+<span id="cb79-2"><a href="#cb79-2"></a>values <span class="op">=</span> <span class="st">&#39;units&#39;</span></span>
+<span id="cb79-3"><a href="#cb79-3"></a>color <span class="op">=</span> <span class="st">&#39;unit_price&#39;</span></span>
+<span id="cb79-4"><a href="#cb79-4"></a>title <span class="op">=</span> <span class="st">&#39;Total Sell-out Units Sold per Sku Category&#39;</span></span>
+<span id="cb79-5"><a href="#cb79-5"></a>filename <span class="op">=</span> <span class="st">&#39;tot_sellout_units_per_cat&#39;</span></span>
+<span id="cb79-6"><a href="#cb79-6"></a>Viz.draw_treemap(df<span class="op">=</span>sellout_final, html_path<span class="op">=</span>config.HTML_PATH, path<span class="op">=</span>path,</span>
+<span id="cb79-7"><a href="#cb79-7"></a>filename<span class="op">=</span>filename, title<span class="op">=</span>title, color<span class="op">=</span>color, values<span class="op">=</span>values, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="a-treemap-to-see-the-total-units-sold-to-each-supplier" class="cell markdown">
+<h4>A treemap to see the total units sold to each supplier.</h4>
+<p>We see that some retailers that buy more to the fabricant don't sell in the same proportion later.</p>
+<p>Small shop situation is very interesting, because they, in proportion don't buy that much to fabricant compared to other formats but experiment a significant growth when selling to final clients.</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1"></a>path<span class="op">=</span>[<span class="st">&#39;supplier&#39;</span>, <span class="st">&#39;format&#39;</span>, <span class="st">&#39;sku_category&#39;</span>, <span class="st">&#39;sku_subcategory&#39;</span>, <span class="st">&#39;sku_description&#39;</span>]</span>
+<span id="cb80-2"><a href="#cb80-2"></a>values <span class="op">=</span> <span class="st">&#39;units&#39;</span></span>
+<span id="cb80-3"><a href="#cb80-3"></a>color <span class="op">=</span> <span class="st">&#39;unit_price&#39;</span></span>
+<span id="cb80-4"><a href="#cb80-4"></a>title <span class="op">=</span> <span class="st">&#39;Total Sell-out Units Sold per Supplier&#39;</span></span>
+<span id="cb80-5"><a href="#cb80-5"></a>filename <span class="op">=</span> <span class="st">&#39;tot_sellout_units_sold_to_suppliers&#39;</span></span>
+<span id="cb80-6"><a href="#cb80-6"></a>Viz.draw_treemap(df<span class="op">=</span>sellout_final, html_path<span class="op">=</span>config.HTML_PATH, path<span class="op">=</span>path,</span>
+<span id="cb80-7"><a href="#cb80-7"></a>filename<span class="op">=</span>filename, title<span class="op">=</span>title, color<span class="op">=</span>color, values<span class="op">=</span>values, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="sunburst" class="cell markdown">
+<h3>Sunburst</h3>
+</section>
+<section id="sunburst-to-see-the-total-amount-of-units-sold-per-nielsen-area" class="cell markdown">
+<h4>Sunburst to see the total amount of units sold per Nielsen Area.</h4>
+<p>Areas <code>VI</code>, <code>III</code> and <code>II</code> sell more units to final client than they buy from fabricants</p>
+<p>Area <code>III</code> has an average unit price way above other areas.</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1"></a>path<span class="op">=</span>[<span class="st">&#39;grade&#39;</span>, <span class="st">&#39;state&#39;</span>]</span>
+<span id="cb81-2"><a href="#cb81-2"></a>values <span class="op">=</span> <span class="st">&#39;units&#39;</span></span>
+<span id="cb81-3"><a href="#cb81-3"></a>color <span class="op">=</span> <span class="st">&#39;unit_price&#39;</span></span>
+<span id="cb81-4"><a href="#cb81-4"></a>title <span class="op">=</span> <span class="st">&#39;Total Sell-out Units Sold per Nielsen Area&#39;</span></span>
+<span id="cb81-5"><a href="#cb81-5"></a>filename <span class="op">=</span> <span class="st">&#39;tot_sellout_units_per_nielsen_area&#39;</span></span>
+<span id="cb81-6"><a href="#cb81-6"></a>Viz.draw_sunburst(df<span class="op">=</span>sellout_final, html_path<span class="op">=</span>config.HTML_PATH, path<span class="op">=</span>path,</span>
+<span id="cb81-7"><a href="#cb81-7"></a>filename<span class="op">=</span>filename, title<span class="op">=</span>title, color<span class="op">=</span>color, values<span class="op">=</span>values, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="barplots" class="cell markdown">
+<h3>Barplots</h3>
+</section>
+<section id="a-barplot-to-see-the-states-that-sell-the-most" class="cell markdown">
+<h4>A Barplot to see the states that sell the most.</h4>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb82"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1"></a>tot_sellout_units_per_state <span class="op">=</span> sellout_final.groupby(<span class="st">&#39;state&#39;</span>, as_index<span class="op">=</span><span class="va">False</span>).<span class="bu">sum</span>(<span class="st">&#39;total&#39;</span>).sort_values(by<span class="op">=</span><span class="st">&#39;total&#39;</span>, ascending<span class="op">=</span><span class="va">False</span>).head()</span>
+<span id="cb82-2"><a href="#cb82-2"></a></span>
+<span id="cb82-3"><a href="#cb82-3"></a>Viz.draw_barplot(tot_sellout_units_per_state, x<span class="op">=</span><span class="st">&#39;state&#39;</span>, y<span class="op">=</span><span class="st">&#39;total&#39;</span>, title<span class="op">=</span><span class="st">&#39;Total Sell-out Revenue per State&#39;</span>, path<span class="op">=</span>config.HTML_PATH, filename<span class="op">=</span><span class="st">&#39;total_sellout_revenue_per_state&#39;</span>, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="violin-plot" class="cell markdown">
+<h3>Violin Plot</h3>
+</section>
+<section id="violin-plot-o-see-how-unit-prices-are-distributed" class="cell markdown">
+<h4>Violin plot o see how unit prices are distributed</h4>
+<p>In this case we don't see any significant gap between product prices.</p>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1"></a>Viz.draw_violinplot(df<span class="op">=</span>sellout_final, col<span class="op">=</span><span class="st">&#39;unit_price&#39;</span>, title<span class="op">=</span><span class="st">&#39;Sell-out Unit Price Distribution&#39;</span>, path<span class="op">=</span>config.STATIC_PATH, filename<span class="op">=</span><span class="st">&#39;sellout_price_distribution&#39;</span>, save<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<section id="4-final-query" class="cell markdown">
+<h1><a id='4'>4. Final query</a></h1>
+<p>As it was mentioned in the <code>instrucciones</code> file, the Data Science team needs a Dataset in which they can access different values in a single query.</p>
+</section>
+<section id="41-data-science-team-prompt" class="cell markdown">
+<h3><a id='4.1.'>4.1. Data Science Team prompt</a></h3>
+<p>Here is the prompt: <p> El objetivo es realizar una limpieza y ajuste de estos datos, y generar una estructura de datos que sea fácilmente consultable por el equipo de datascientists para generar sus modelos. </p> <h3> Esto requiere que los datos no sólo estén limpios, sino que sean coherentes entre si y estén perfectamente ordenados. Un ejemplo de consulta que el equipo de datascientists puede requerir es "necesito todos los registros de sellout y sellin entre las fechas X e Y para los productos A,B,C y D en esta lista concreta de tiendas: T1, T2, T3, T4, T5 y T6" siendo X,Y, A, B, C, D, T1, T2, T3, T4, T5, y T6 variables. </h3></p>
+</section>
+<section id="42-sample-query" class="cell markdown">
+<h3><a id='4.2.'>4.2. Sample query</a></h3>
+</section>
+<section id="sellin-data" class="cell markdown">
+<h4>Sellin Data</h4>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1"></a><span class="co"># To make the query they will have to fill in the variables as indicated in the example</span></span>
+<span id="cb84-2"><a href="#cb84-2"></a>x_date <span class="op">=</span> <span class="st">&quot;2016-05-08&quot;</span></span>
+<span id="cb84-3"><a href="#cb84-3"></a>y_date <span class="op">=</span> <span class="st">&quot;2016-05-14&quot;</span></span>
+<span id="cb84-4"><a href="#cb84-4"></a><span class="co"># Fill it with sellin_final_sellin_final or sellin_final_sellout_final</span></span>
+<span id="cb84-5"><a href="#cb84-5"></a>products <span class="op">=</span> sellin_final[<span class="st">&#39;sku_description&#39;</span>].sample(<span class="dv">4</span>) <span class="co"># Use sample just to show it,</span></span>
+<span id="cb84-6"><a href="#cb84-6"></a>stores <span class="op">=</span> [<span class="dv">433</span>, <span class="dv">985</span>, <span class="dv">300</span>, <span class="dv">20</span>, <span class="dv">976</span>, <span class="dv">122</span>]</span>
+<span id="cb84-7"><a href="#cb84-7"></a></span>
+<span id="cb84-8"><a href="#cb84-8"></a>final_sellin_query <span class="op">=</span> sellin_final[(sellin_final[<span class="st">&#39;date&#39;</span>] <span class="op">&gt;</span> x_date) <span class="op">&amp;</span> (sellin_final[<span class="st">&#39;date&#39;</span>] <span class="op">&lt;</span> y_date) <span class="op">&amp;</span> (sellin_final[<span class="st">&#39;sku_description&#39;</span>].isin(products)) <span class="op">&amp;</span> (sellin_final[<span class="st">&#39;store_id&#39;</span>].isin(stores))]</span>
+<span id="cb84-9"><a href="#cb84-9"></a>final_sellout_query <span class="op">=</span> sellout_final[(sellout_final[<span class="st">&#39;date&#39;</span>] <span class="op">&gt;</span> x_date) <span class="op">&amp;</span> (sellout_final[<span class="st">&#39;date&#39;</span>] <span class="op">&lt;</span> y_date) <span class="op">&amp;</span> (sellout_final[<span class="st">&#39;sku_description&#39;</span>].isin(products)) <span class="op">&amp;</span> (sellout_final[<span class="st">&#39;store_id&#39;</span>].isin(stores))]</span>
+<span id="cb84-10"><a href="#cb84-10"></a></span>
+<span id="cb84-11"><a href="#cb84-11"></a><span class="bu">print</span>(<span class="ss">f&quot;****** SELLIN FINAL QUERY ******&quot;</span>)</span>
+<span id="cb84-12"><a href="#cb84-12"></a>display(final_sellin_query)</span>
+<span id="cb84-13"><a href="#cb84-13"></a><span class="bu">print</span>()</span>
+<span id="cb84-14"><a href="#cb84-14"></a><span class="bu">print</span>(<span class="ss">f&quot;****** SELLOUT FINAL QUERY ******&quot;</span>)</span>
+<span id="cb84-15"><a href="#cb84-15"></a>display(final_sellout_query)</span></code></pre></div>
+</div>
+<section id="5-conclusion" class="cell markdown">
+<h1><a id='5'>5. Conclusion</a></h1>
+</section>
+<section id="51-about-the-data" class="cell markdown">
+<h3><a id='5.1.'>5.1. About the Data</a></h3>
+<p>To sum up, there are some issues concerning the data that should be highlighted.</p>
+<ul>
+<li><h3 id="on-the-first-place-the-datatypes-werent-in-most-cases-the-desired-ones"><strong>On the first place, the datatypes weren't, in most cases, the desired ones.</strong></h3>
+<ul>
+<li>From the Data Analysis team, we should suggest other data collection tool or structure in order to avoid some incompatibilities and time consumption doing repetitive tasks.</li>
+</ul></li>
+<li><h3 id="we-should-also-ask-our-client-about-registries-that-belong-to-2015"><strong>We should also ask our client about registries that belong to 2015.</strong></h3>
+<ul>
+<li>We found some issues merging our sellin data with <code>maestro productos</code> and <code>maestro clientes</code>.</li>
+<li>In particular, the sellin dataset does not have extra information about suppliers that bought their products</li>
+</ul></li>
+<li><h3 id="consistent-amount-of-outliers-in-both-final-datasets"><strong>Consistent amount of outliers in both final datasets</strong></h3>
+<ul>
+<li>There are not a small degree of observations that were classified as outliers due to the fact they exceeded the "normal" distribution.</li>
+<li>We should have an appointment with our client to gather more information about this data and see if we can do something with it.</li>
+</ul></li>
+<li><h3 id="some-observations-with-0-or-less-unitsprices"><strong>Some observations with 0 or less units/prices</strong></h3>
+<ul>
+<li>There were some sales with 0 or negative units/prices assigned to them. This may seem irrelevant at first sight, but in the long term could result in serious trouble for our client. We should ask about what happened in that particular cases</li>
+</ul></li>
+</ul>
+</section>
+<section id="52-further-steps" class="cell markdown">
+<h3><a id='5.2.'>5.2. Further steps</a></h3>
+<ul>
+<li><h3 id="after-dealing-with-this-sales-data-we-suggest-our-team-to-store-it-in-a-relational-database-that-can-be-acessed-easier-by-some-saas-or-sql-queries"><strong>After dealing with this sales data, we suggest our team to store it in a relational database that can be acessed easier by some SaaS or SQL queries.</strong></h3></li>
+<li><h3 id="the-pipeline-for-this-particular-task-can-be-optimised-by-doing-this-the-time-spent-dealing-with-incompatibilities-would-have-been-significantly-shorter"><strong>The pipeline for this particular task can be optimised. By doing this, the time spent dealing with incompatibilities would have been significantly shorter.</strong></h3></li>
+<li><h3 id="deploy-the-report-to-production-to-make-it-easily-shareable"><strong>Deploy the report to production to make it easily shareable.</strong></h3></li>
+<li><h3 id="once-the-analysis-and-data-preparation-is-done-for-our-client-from-the-data-analysis-team-we-suggest-data-science-department-the-following"><strong>Once the analysis and data preparation is done for our client, from the Data Analysis team we suggest Data Science Department the following:</strong></h3>
+<ul>
+<li>Drop id related columns.</li>
+<li>Apply units, price and margin tresholds to get a better performance of our model.</li>
+<li>Try vectorization in columns like division, state or other categorical columns.</li>
+</ul></li>
+</ul>
+</section>
+<section id="go-back-to-the-top" class="cell markdown">
+<h2><a href ='#0'>Go back to the top</a></h2>
+</section>
+<div class="cell code">
+<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+</body>
+</html>
