@@ -1,16 +1,6 @@
 import os
 
-"""
-@leosanchezsoler
-TODO
-    - Create variables to work with.
-    - For example:
-        - DF1
-        - DF2
-        - DATA_PATH
-        - OUTPUT PATH
-        ...
-"""
+
 ################# SEPARATOR #################
 
 SEP = os.sep

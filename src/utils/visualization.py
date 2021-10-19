@@ -16,11 +16,7 @@ sns.set(rc={"figure.dpi":300, "savefig.dpi": 300})
 class Viz:
     
     """
-    @leosanchezsoler
-    TODO:
-        - build class documentation
-        - create functions for making plots:
-            + RECUPERAR CLASES DE EDA GRUPAL
+    This class is used to build all kinds of charts
     """
     @staticmethod
     def draw_treemap(df, path, color, values, title, filename, html_path, save=False):

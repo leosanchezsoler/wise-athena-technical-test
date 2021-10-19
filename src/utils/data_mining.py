@@ -4,11 +4,7 @@ import numpy as np
 
 class DataAnalyzer:
     """
-    @leosanchezsoler
-    TODO
-        - Create class documentation
-        - Create a function for displaying df_info
-        - Create a function for
+    This class is used for Data Mining tasks
     """
 
     @staticmethod
